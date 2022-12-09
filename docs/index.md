@@ -1,13 +1,14 @@
 ---
 layout: default
 ---
+![Branching](https://raw.githubusercontent.com/decyphertek-io/configs/main/Logos/decyphertek-logo.png)
 
 Decyphertek decodes open source technology , providing a secure ready to deploy server on AWS MarektPlace. 
 The technical notes regarding how the servers are built are available via Read The Docs. You can also visit
 our Github page . 
 
 # [AWS MarketPlace] (./https://aws.amazon.com/marketplace/seller-profile?id=851968a2-7d3c-4a0b-8c33-5351d91aaef1).
-![Branching](https://guides.github.com/activities/hello-world/branching.png)
+![Branching](https://raw.githubusercontent.com/decyphertek-io/configs/main/Logos/AWS.png)
 
 Decyphertek provides secure ready to deploy open source servers on AWS marketplace. Decoding Technology , to help
 your business or project get started faster. 

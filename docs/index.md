@@ -23,7 +23,6 @@ Available Servers:
      * Debian11 - GIS Workstation
      * Jenkins: Secured W/ Nginx + Modsec WAF
 
-
 ## Read The Docs
 ![Readthedocs](https://raw.githubusercontent.com/decyphertek-io/configs/main/Logos/Read-The-Docs.png)
 

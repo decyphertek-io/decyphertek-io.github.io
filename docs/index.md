@@ -16,18 +16,18 @@ your business or project get started faster.
 
 ### Available Servers:
      
-*   Node-RED
-*   OneDev : Secured W/ Nginx + Modsecurity WAF
-*   Firezone : Wireguard VPn Server - Secured
-*   Debian11 - GIS Workstation
-*   Jenkins: Secured W/ Nginx + Modsec WAF
-*   Mitre Caldera 
-*   Ubuntu 22.04 XFCE Desktop - Ultimate SysAdmin
-*   Jupyterhub
-*   ZoneMinder - Secured
-*   CheckMK - Secured
-*   Nginx + Modsecurity WAF + Security Features
-*   Secure Ubuntu 20.04 LTS
+*  Node-RED
+*  OneDev : Secured W/ Nginx + Modsecurity WAF
+*  Firezone : Wireguard VPn Server - Secured
+*  Debian11 - GIS Workstation
+*  Jenkins: Secured W/ Nginx + Modsec WAF
+*  Mitre Caldera 
+*  Ubuntu 22.04 XFCE Desktop - Ultimate SysAdmin
+*     Jupyterhub
+*     ZoneMinder - Secured
+*    CheckMK - Secured
+* Nginx + Modsecurity WAF + Security Features
+* Secure Ubuntu 20.04 LTS
 
 ## [Read The Docs](https://decyphertek.readthedocs.io/en/latest/#)
 

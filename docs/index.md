@@ -8,7 +8,6 @@ our Github page .
 
 ![Decyphertek](https://raw.githubusercontent.com/decyphertek-io/configs/main/Logos/decyphertek-logo.png)
 
-
 AWS marketPlace 
 ---------------
 
@@ -27,8 +26,7 @@ your business or project get started faster. [AWS MarketPlace] (URL "https://aws
      * ZoneMinder - Secured
      * CheckMK - Secured
      * Nginx + Modsecurity WAF + Security Features
-     * Secure Ubuntu 20.04
-
+     * Secure Ubuntu 20.04 LTS
 
 Read The Docs 
 --------------

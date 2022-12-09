@@ -14,12 +14,12 @@ our Github page .
 Decyphertek provides secure ready to deploy open source servers on AWS marketplace. Decoding Technology , to help
 your business or project get started faster. 
     
-     Available Servers:
-     * Node-RED
-     * OneDev : Secured W/ Nginx + Modsecurity WAF
-     * Firezone : Wireguard VPn Server - Secured
-     * Debian11 - GIS Workstation
-     * Jenkins: Secured W/ Nginx + Modsec WAF
+Available Servers:
+* Node-RED
+* OneDev : Secured W/ Nginx + Modsecurity WAF
+* Firezone : Wireguard VPn Server - Secured
+* Debian11 - GIS Workstation
+* Jenkins: Secured W/ Nginx + Modsec WAF
 
 [Read The Docs] (https://decyphertek.readthedocs.io/en/latest/#Github/)
 --------------

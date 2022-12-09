@@ -2,25 +2,23 @@
 layout: default
 ---
 
-Text can be **bold**, _italic_, ~~strikethrough~~ or `keyword`.
+Decyphertek decodes open source technology , providing a secure ready to deploy server on AWS MarektPlace. 
+The technical notes regarding how the servers are built are available via Read The Docs. You can also visit
+our Github page . 
 
-[Link to another page](./another-page.html).
 
-There should be whitespace between paragraphs.
+# [AWS MarketPlace] (./https://aws.amazon.com/marketplace/seller-profile?id=851968a2-7d3c-4a0b-8c33-5351d91aaef1).
 
-There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
+Decyphertek provides secure ready to deploy open source servers on AWS marketplace. Decoding Technology , to help
+your business or project get started faster. 
 
-# Header 1
-
-This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
-
-## Header 2
+# Read The Docs
 
 > This is a blockquote following a header.
 >
 > When something is important enough, you do it even if the odds are not in your favor.
 
-### Header 3
+### Github
 
 ```js
 // Javascript code with syntax highlighting.

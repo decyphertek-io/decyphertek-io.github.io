@@ -8,7 +8,6 @@ layout: default
 
 ![Decyphertek](https://raw.githubusercontent.com/decyphertek-io/configs/main/Logos/decyphertek-logo.png)
 
-
 ## [AWS Marketplace](https://aws.amazon.com/marketplace/seller-profile?id=851968a2-7d3c-4a0b-8c33-5351d91aaef1)
 
      Decyphertek provides secure ready to deploy open source servers on AWS marketplace. Decoding 

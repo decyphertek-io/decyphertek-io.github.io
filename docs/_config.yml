@@ -1,6 +1,7 @@
 title: Decyphertek
 description: Decoding Technology
-github: https://github.com/decyphertek-io
+site.github.url: https://github.com/decyphertek-io
+URL: https://decyphertek-io.github.io/
 # show_downloads: true
 # google_analytics:
 theme: jekyll-theme-hacker

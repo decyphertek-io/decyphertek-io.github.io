@@ -2,6 +2,11 @@
 layout: default
 ---
 
+## About
+
+     Decyphertek decodes open source technology helping your enterprise with the technical complexities.
+     We are available on AWS Marketplace , Github , and Read The Docs. 
+
 ## [AWS Marketplace](https://aws.amazon.com/marketplace/seller-profile?id=851968a2-7d3c-4a0b-8c33-5351d91aaef1)
 
      Decyphertek provides secure ready to deploy open source servers on AWS marketplace. Decoding 
@@ -22,7 +27,7 @@ layout: default
 * Nginx + Modsecurity WAF + Security Features
 * Secure Ubuntu 20.04 LTS
 
-### Security Features 
+### Security Features:
 
 * Nginx Reverse Proxy 
 * Modsecurity WAF 

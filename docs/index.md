@@ -2,10 +2,8 @@
 layout: default
 ---
 
-## About US
-
-Decyphertek decodes open source technology helping your enterprise with the technical complexities.
-We are available on AWS Marketplace , Github , and Read The Docs. 
+**Decyphertek decodes open source technology helping your enterprise with the technical complexities.
+We are available on AWS Marketplace , Github , and Read The Docs.** 
 
 ## [AWS Marketplace](https://aws.amazon.com/marketplace/seller-profile?id=851968a2-7d3c-4a0b-8c33-5351d91aaef1)
 

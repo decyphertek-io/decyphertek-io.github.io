@@ -17,6 +17,7 @@ We are available on AWS Marketplace , Github , and Read The Docs.**
 * Firezone 
 * GIS Workstation
 * Jenkins
+* Odoo CE 16 
 * Mitre Caldera 
 * Ultimate SysAdmin Desktop
 * Jupyterhub

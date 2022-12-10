@@ -15,16 +15,16 @@ We are available on AWS Marketplace , Github , and Read The Docs.**
 * Node-RED
 * OneDev 
 * Firezone 
-* GIS Workstation
 * Jenkins
 * Odoo CE 16 
 * Mitre Caldera 
-* Ultimate SysAdmin Desktop
 * Jupyterhub
 * ZoneMinder 
 * CheckMK 
-* Nginx + Modsecurity WAF + Security Features
+* GIS Workstation
+* Nginx + Modsec WAF
 * Secure Ubuntu 20.04 LTS
+* Ultimate SysAdmin Desktop
 
 ### Security Features:
 

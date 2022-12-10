@@ -9,18 +9,29 @@ layout: default
 
 ### Available Servers:
 
-*    Node-RED
-*    OneDev : Secured W/ Nginx + Modsecurity WAF
-*    Firezone : Wireguard VPN Server - Secured
-*    Debian11 - GIS Workstation
-*    Jenkins: Secured W/ Nginx + Modsec WAF
-*    Mitre Caldera 
-*    Ubuntu 22.04 XFCE Desktop - Ultimate SysAdmin
-*    Jupyterhub
-*    ZoneMinder - Secured
-*    CheckMK - Secured
-*    Nginx + Modsecurity WAF + Security Features
-*    Secure Ubuntu 20.04 LTS
+* Node-RED
+* OneDev 
+* Firezone 
+* GIS Workstation
+* Jenkins
+* Mitre Caldera 
+* Ultimate SysAdmin Desktop
+* Jupyterhub
+* ZoneMinder 
+* CheckMK 
+* Nginx + Modsecurity WAF + Security Features
+* Secure Ubuntu 20.04 LTS
+
+### Security Features 
+
+* Nginx Reverse Proxy 
+* Modsecurity WAF 
+* OWASP Ruleset 
+* Crowdsec IPS
+* UFW host Firewall
+* Quad9 DNS Security 
+* Unattended Upgrades patching
+* Auditd Logging
 
 ## [Read The Docs](https://decyphertek.readthedocs.io/en/latest/#)
 

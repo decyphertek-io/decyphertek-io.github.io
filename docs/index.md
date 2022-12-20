@@ -22,7 +22,6 @@ We are available on AWS Marketplace , Github , and Read The Docs.**
 * ZoneMinder 
 * CheckMK 
 * GIS Workstation
-* ROS Desktop ( Coming Soon )
 * Debian 11 Medical ( Coming Soon )
 * Nginx + Modsec WAF
 * Secure Ubuntu 20.04 LTS

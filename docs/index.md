@@ -22,10 +22,11 @@ We are available on AWS Marketplace , Github , and Read The Docs.**
 * ZoneMinder 
 * CheckMK 
 * GIS Workstation
-* DebianMed 11 Desktop( Coming Soon )
+* DebianMed 11 Desktop
 * Nginx + Modsec WAF
 * Secure Ubuntu 20.04 LTS
 * Ultimate SysAdmin Desktop
+* LEMP Stack + Modsec WAF + Composer
 
 ### Security Features:
 

@@ -10,26 +10,10 @@ We are available on AWS Marketplace , Github , and Read The Docs.**
      Decyphertek provides secure ready to deploy open source servers on AWS marketplace. Decoding 
      Technology , to help your business or project get started faster. 
 
-### Available Servers:
-
-* Node-RED
-* OneDev 
-* Firezone 
-* Jenkins
-* Odoo CE 16 
-* Mitre Caldera 
-* Jupyterhub
-* ZoneMinder 
-* CheckMK 
-* GIS Workstation
-* DebianMed 11 Desktop
-* Nginx + Modsec WAF
-* Secure Ubuntu 20.04 LTS
-* Ultimate SysAdmin Desktop
-* LEMP Stack + Modsec WAF + Composer
-
 ### Security Features:
 
+
+* Ubuntu 22.04 LTS Builds:
 * Nginx Reverse Proxy 
 * Modsecurity WAF 
 * OWASP Ruleset 
@@ -39,10 +23,13 @@ We are available on AWS Marketplace , Github , and Read The Docs.**
 * Unattended Upgrades patching
 * Auditd Logging
 
+* Flatcar Linux Stable Builds: 
+* Immutable OS
+* Latest Docker images
+
 ## [Read The Docs](https://decyphertek.readthedocs.io/en/latest/#)
 
-     Decyphertek Read The Docs provides technical notes on open source technology. This can be 
-     useful as an AWS Marketplace customer or can be used to help troubleshoot an issue with 
+     Decyphertek Read The Docs provides technical notes on open source technology. This can be useful as an AWS Marketplace customer or can be used to help troubleshoot an issue with 
      your open source project.
 
 ![Decyphertek-io](https://raw.githubusercontent.com/decyphertek-io/configs/main/Logos/decyphertek-logo.png)

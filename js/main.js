@@ -1,0 +1,175 @@
+// Mobile menu toggle
+document.addEventListener('DOMContentLoaded', function() {
+    // Mobile menu functionality
+    const menuButton = document.querySelector('.fa-bars')?.parentElement;
+    if (menuButton) {
+        const mobileMenu = document.createElement('div');
+        mobileMenu.className = 'mobile-menu fixed top-0 left-0 h-full w-64 bg-gray-800 z-50 transform -translate-x-full transition-transform duration-300 ease-in-out shadow-lg';
+        
+        // Create menu content safely
+        const menuDiv = document.createElement('div');
+        menuDiv.className = 'p-6';
+        
+        const headerDiv = document.createElement('div');
+        headerDiv.className = 'flex justify-between items-center mb-8';
+        
+        const logoDiv = document.createElement('div');
+        logoDiv.className = 'text-xl font-bold text-green-500';
+        
+        const logoIcon = document.createElement('i');
+        logoIcon.className = 'fas fa-cloud mr-2';
+        logoDiv.appendChild(logoIcon);
+        
+        const logoText = document.createTextNode('Decyphertek');
+        logoDiv.appendChild(logoText);
+        
+        const closeBtn = document.createElement('button');
+        closeBtn.className = 'text-gray-200 hover:text-white';
+        
+        const closeIcon = document.createElement('i');
+        closeIcon.className = 'fas fa-times text-xl';
+        closeBtn.appendChild(closeIcon);
+        
+        headerDiv.appendChild(logoDiv);
+        headerDiv.appendChild(closeBtn);
+        
+        const nav = document.createElement('nav');
+        nav.className = 'space-y-6';
+        
+        // Menu links
+        const links = [
+            { href: '#', text: 'Home' },
+            { href: '#services', text: 'Docs' },
+            { href: '#github', text: 'GitHub' },
+            { href: '#contact', text: 'Contact' }
+        ];
+        
+        links.forEach(link => {
+            const a = document.createElement('a');
+            a.href = link.href;
+            a.className = 'block text-gray-300 hover:text-green-500 font-medium';
+            a.textContent = link.text;
+            nav.appendChild(a);
+        });
+        
+        menuDiv.appendChild(headerDiv);
+        menuDiv.appendChild(nav);
+        mobileMenu.appendChild(menuDiv);
+        
+        document.body.appendChild(mobileMenu);
+        
+        // Toggle mobile menu
+        menuButton.addEventListener('click', function() {
+            mobileMenu.classList.toggle('-translate-x-full');
+        });
+        
+        // Close mobile menu
+        closeBtn.addEventListener('click', function() {
+            mobileMenu.classList.add('-translate-x-full');
+        });
+        
+        // Close menu when clicking on links
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                mobileMenu.classList.add('-translate-x-full');
+            });
+        });
+    }
+    
+    // Dark/Light mode toggle
+    const themeToggle = document.querySelector('[aria-label="Toggle dark mode"]');
+    if (themeToggle) {
+        const htmlElement = document.documentElement;
+        const sunIcon = themeToggle.querySelector('.fa-sun');
+        
+        if (sunIcon) {
+            themeToggle.addEventListener('click', function() {
+                if (sunIcon.classList.contains('fa-sun')) {
+                    sunIcon.classList.remove('fa-sun');
+                    sunIcon.classList.add('fa-moon');
+                    sunIcon.classList.remove('text-yellow-400');
+                    sunIcon.classList.add('text-blue-400');
+                    // Would implement actual light mode toggle here
+                } else {
+                    sunIcon.classList.remove('fa-moon');
+                    sunIcon.classList.add('fa-sun');
+                    sunIcon.classList.remove('text-blue-400');
+                    sunIcon.classList.add('text-yellow-400');
+                    // Would implement actual dark mode toggle here
+                }
+            });
+        }
+    }
+    
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            if (href && href !== '#') {
+                e.preventDefault();
+                const targetElement = document.querySelector(href);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            }
+        });
+    });
+    
+    // Add hover-scale class to buttons
+    document.querySelectorAll('button').forEach(button => {
+        button.classList.add('hover-scale');
+    });
+    
+    // Form validation
+    const contactForm = document.querySelector('#contact form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form elements safely
+            const nameInput = document.getElementById('name');
+            const emailInput = document.getElementById('email');
+            const subjectInput = document.getElementById('subject');
+            const messageInput = document.getElementById('message');
+            
+            if (!nameInput || !emailInput || !subjectInput || !messageInput) {
+                console.error('Form fields not found');
+                return;
+            }
+            
+            // Get values and sanitize
+            const name = nameInput.value.trim();
+            const email = emailInput.value.trim();
+            const subject = subjectInput.value.trim();
+            const message = messageInput.value.trim();
+            
+            // Simple validation
+            if (!name || !email || !subject || !message) {
+                alert('Please fill in all fields');
+                return;
+            }
+            
+            // Email validation with strict regex
+            const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            if (!emailRegex.test(email)) {
+                alert('Please enter a valid email address');
+                return;
+            }
+            
+            // Would send form data to server here
+            console.log('Form submitted:', { 
+                name: name, 
+                email: email, 
+                subject: subject, 
+                message: message 
+            });
+            
+            alert('Thank you for your message! We will get back to you soon.');
+            this.reset();
+        });
+    }
+});

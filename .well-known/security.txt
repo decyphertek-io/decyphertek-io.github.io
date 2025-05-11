@@ -1,0 +1,6 @@
+# Security Policy for Decyphertek
+Contact: mailto:adminotaur@decyphertek.io
+Expires: 2026-05-11T23:59:59.000Z
+Preferred-Languages: en
+Policy: https://decyphertek-io.github.io/security-policy
+Canonical: https://decyphertek-io.github.io/.well-known/security.txt

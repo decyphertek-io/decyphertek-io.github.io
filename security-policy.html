@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" href="data/web-logo.png">
+        
+        <!-- Security Headers -->
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data:; base-uri 'self'; object-src 'none'; form-action 'self'; frame-ancestors 'self'; upgrade-insecure-requests;">
+        <meta http-equiv="X-Content-Type-Options" content="nosniff">
+        <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+        <meta name="referrer" content="strict-origin-when-cross-origin">
+        <title>Security Policy - Decyphertek</title>
+        <link href="data/all.min.css" rel="stylesheet">
+        <link href="data/tailwind-custom.css" rel="stylesheet">
+        <!-- Using CDN for Font Awesome icons since we have all.min.css -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+        <!-- Using CDN for Tailwind CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+        <!-- Adding Montserrat font -->
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+    <div id="root">
+        <div class="min-h-screen bg-gray-900 text-white">
+            <!-- Header -->
+            <header class="fixed w-full z-50 bg-black">
+                <div class="container mx-auto px-6 py-3 relative">
+                    <!-- Logo on far left -->
+                    <div class="absolute left-0 top-1/2 transform -translate-y-1/2 flex items-center">
+                        <a href="index.html" class="flex items-center">
+                            <img src="data/web-logo.png" alt="Decyphertek" class="h-12 mr-3">
+                            <span class="text-lg font-bold" style="font-family: 'Montserrat', sans-serif; letter-spacing: 1px; background: linear-gradient(90deg, #22c55e, #3b82f6); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; text-transform: uppercase;">DECYPHERTEK</span>
+                        </a>
+                    </div>
+                    
+                    <!-- Navigation links centered -->
+                    <nav class="hidden md:flex items-center justify-center w-full">
+                        <ul class="flex space-x-8">
+                            <li><a href="index.html" class="text-gray-300 hover:text-green-500 font-medium">Home</a></li>
+                            <li><a href="https://decyphertek.readthedocs.io/en/latest/" target="_blank" class="text-gray-300 hover:text-green-500 font-medium">Docs</a></li>
+                            <li><a href="https://github.com/decyphertek-io" target="_blank" class="text-gray-300 hover:text-green-500 font-medium">GitHub</a></li>
+                        </ul>
+                    </nav>
+                    
+                    <!-- Mobile menu button -->
+                    <div class="md:hidden absolute right-6 top-1/2 transform -translate-y-1/2">
+                        <button class="text-gray-300 hover:text-white focus:outline-none">
+                            <i class="fas fa-bars text-xl"></i>
+                        </button>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Main Content -->
+            <main class="pt-24 pb-12">
+                <div class="container mx-auto px-6">
+                    <div class="max-w-3xl mx-auto bg-gray-800 rounded-lg p-8 shadow-lg">
+                        <h1 class="text-3xl font-bold mb-6 text-center">Security Policy</h1>
+                        
+                        <section class="mb-8">
+                            <h2 class="text-2xl font-semibold mb-4">Responsible Disclosure</h2>
+                            <p class="text-gray-200 mb-4">
+                                At Decyphertek, we take security seriously. We appreciate the efforts of security researchers and the broader community in helping us maintain high security standards.
+                            </p>
+                            <p class="text-gray-200 mb-4">
+                                If you discover a security vulnerability in any of our systems or products, we encourage you to disclose it to us responsibly by emailing <strong>adminotaur@decyphertek.io</strong>.
+                            </p>
+                        </section>
+                        
+                        <section class="mb-8">
+                            <h2 class="text-2xl font-semibold mb-4">Guidelines for Responsible Disclosure</h2>
+                            <ul class="list-disc pl-6 text-gray-200 space-y-2">
+                                <li>Provide detailed information about the vulnerability, including steps to reproduce</li>
+                                <li>Allow reasonable time for us to address the issue before public disclosure</li>
+                                <li>Do not access, modify, or delete data beyond what is necessary to demonstrate the vulnerability</li>
+                                <li>Do not degrade the performance of our systems or services</li>
+                                <li>Do not violate the privacy of our users, employees, or other parties</li>
+                            </ul>
+                        </section>
+                        
+                        <section class="mb-8">
+                            <h2 class="text-2xl font-semibold mb-4">Our Commitment</h2>
+                            <p class="text-gray-200 mb-4">
+                                We commit to:
+                            </p>
+                            <ul class="list-disc pl-6 text-gray-200 space-y-2">
+                                <li>Acknowledge receipt of your vulnerability report within 3 business days</li>
+                                <li>Provide an estimated timeframe for addressing the vulnerability</li>
+                                <li>Notify you when the vulnerability has been fixed</li>
+                                <li>Give proper credit to security researchers who report vulnerabilities responsibly</li>
+                            </ul>
+                        </section>
+                        
+                        <section>
+                            <h2 class="text-2xl font-semibold mb-4">Scope</h2>
+                            <p class="text-gray-200 mb-4">
+                                This security policy applies to all Decyphertek systems, applications, and services that are publicly accessible.
+                            </p>
+                            <p class="text-gray-200">
+                                Thank you for helping us keep Decyphertek secure!
+                            </p>
+                        </section>
+                    </div>
+                </div>
+            </main>
+
+            <!-- Footer -->
+            <footer class="bg-black border-t border-gray-800 py-0">
+                <div class="container mx-auto px-6">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center -mt-4 -mb-4">
+                            <img src="data/decyphertek-logo.png" alt="Decyphertek" class="h-56">
+                        </div>
+                        
+                        <div class="text-center">
+                            <span class="text-gray-200 text-lg"><span class="font-bold">Privacy Notice:</span> We respect your privacy and do not collect or sell your data.</span>
+                        </div>
+                        
+                        <div class="text-right">
+                            <span class="text-gray-200 text-lg"><span class="font-bold">Contact:</span> <i class="fas fa-envelope mr-1 text-xl"></i>adminotaur@decyphertek.io</span>
+                        </div>
+                    </div>
+                    
+                    <div class="border-t border-gray-700 mt-1 mb-0"></div>
+                    
+                    <div class="text-center text-gray-200 text-sm py-1">
+                        <p>&copy; 2025 Decyphertek. All rights reserved.</p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>

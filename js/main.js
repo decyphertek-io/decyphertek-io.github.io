@@ -14,13 +14,26 @@ document.addEventListener('DOMContentLoaded', function() {
         headerDiv.className = 'flex justify-between items-center mb-8';
         
         const logoDiv = document.createElement('div');
-        logoDiv.className = 'text-xl font-bold text-green-500';
+        logoDiv.className = 'flex items-center';
         
-        const logoIcon = document.createElement('i');
-        logoIcon.className = 'fas fa-cloud mr-2';
-        logoDiv.appendChild(logoIcon);
+        // Create logo image
+        const logoImg = document.createElement('img');
+        logoImg.src = 'data/web-logo.png';
+        logoImg.alt = 'Decyphertek';
+        logoImg.className = 'h-8 mr-2';
+        logoDiv.appendChild(logoImg);
         
-        const logoText = document.createTextNode('Decyphertek');
+        // Create logo text with gradient
+        const logoText = document.createElement('span');
+        logoText.className = 'text-sm font-bold';
+        logoText.textContent = 'DECYPHERTEK';
+        logoText.style.fontFamily = "'Montserrat', sans-serif";
+        logoText.style.letterSpacing = '1px';
+        logoText.style.background = 'linear-gradient(90deg, #22c55e, #3b82f6)';
+        logoText.style.webkitBackgroundClip = 'text';
+        logoText.style.backgroundClip = 'text';
+        logoText.style.webkitTextFillColor = 'transparent';
+        logoText.style.textTransform = 'uppercase';
         logoDiv.appendChild(logoText);
         
         const closeBtn = document.createElement('button');
@@ -39,9 +52,8 @@ document.addEventListener('DOMContentLoaded', function() {
         // Menu links
         const links = [
             { href: '#', text: 'Home' },
-            { href: '#services', text: 'Docs' },
-            { href: '#github', text: 'GitHub' },
-            { href: '#contact', text: 'Contact' }
+            { href: 'https://decyphertek.readthedocs.io/en/latest/', text: 'Docs' },
+            { href: 'https://github.com/decyphertek-io', text: 'GitHub' }
         ];
         
         links.forEach(link => {

@@ -51,16 +51,24 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Menu links
         const links = [
-            { href: '#', text: 'Home' },
-            { href: 'https://decyphertek.readthedocs.io/en/latest/', text: 'Docs' },
-            { href: 'https://github.com/decyphertek-io', text: 'GitHub' }
+            { href: 'https://decyphertek.readthedocs.io/en/latest/', text: 'Docs', icon: 'fas fa-book text-blue-400 mr-2' },
+            { href: 'https://github.com/decyphertek-io', text: 'GitHub', icon: 'fab fa-github text-gray-300 mr-2' }
         ];
         
         links.forEach(link => {
             const a = document.createElement('a');
             a.href = link.href;
-            a.className = 'block text-gray-300 hover:text-green-500 font-medium';
-            a.textContent = link.text;
+            a.className = 'block text-gray-300 hover:text-green-500 font-medium flex items-center';
+            
+            // Add icon if present
+            if (link.icon) {
+                const icon = document.createElement('i');
+                icon.className = link.icon;
+                a.appendChild(icon);
+            }
+            
+            const text = document.createTextNode(link.text);
+            a.appendChild(text);
             nav.appendChild(a);
         });
         

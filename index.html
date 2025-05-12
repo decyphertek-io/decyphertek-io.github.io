@@ -121,6 +121,11 @@
             border-color: #4f46e5;
         }
         
+        /* Override card hover border for docs cards */
+        .docs-card:hover {
+            border-color: #374151 !important; /* Keep the original border color */
+        }
+        
         /* Button Glow Effect */
         .btn-glow:hover {
             box-shadow: 0 0 15px rgba(79, 70, 229, 0.6);
@@ -318,35 +323,35 @@
                     </div>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         <!-- AWS Docs Card -->
-                        <div class="card bg-black rounded-lg p-8 hover-scale">
+                        <div class="card bg-black rounded-lg p-8 hover-scale docs-card">
                             <div class="mb-4 flex">
                                 <img src="data/AWS.svg" alt="AWS" class="h-12 object-contain">
                             </div>
                             <h3 class="text-xl font-bold mb-3">AWS Documentation</h3>
                             <p class="text-gray-200 mb-6">Comprehensive guides for deploying and managing our secure VM solutions on Amazon Web Services.</p>
-                            <a href="https://decyphertek.readthedocs.io/en/latest/products/aws/contents/" target="_blank" class="text-blue-500 hover:text-blue-400 font-medium inline-flex items-center">
+                            <a href="https://decyphertek.readthedocs.io/en/latest/products/aws/contents/" target="_blank" class="text-blue-500 font-medium inline-flex items-center">
                                 View Documentation <i class="fas fa-arrow-right ml-2"></i>
                             </a>
                         </div>
                         <!-- GCP Docs Card -->
-                        <div class="card bg-black rounded-lg p-8 hover-scale">
+                        <div class="card bg-black rounded-lg p-8 hover-scale docs-card">
                             <div class="mb-4 flex">
                                 <img src="data/GCP.svg" alt="GCP" class="h-12 object-contain">
                             </div>
                             <h3 class="text-xl font-bold mb-3">GCP Documentation</h3>
-                            <p class="text-gray-200 mb-6">Step-by-step instructions for implementing our secure solutions on Google Cloud Platform.</p>
-                            <a href="https://decyphertek.readthedocs.io/en/latest/products/gcp-contents/" target="_blank" class="text-blue-500 hover:text-blue-400 font-medium inline-flex items-center">
+                            <p class="text-gray-200 mb-6">Step-by-step instructions for deploying and managing our secure VM solutions on Google Cloud Platform.</p>
+                            <a href="https://decyphertek.readthedocs.io/en/latest/products/gcp-contents/" target="_blank" class="text-blue-500 font-medium inline-flex items-center">
                                 View Documentation <i class="fas fa-arrow-right ml-2"></i>
                             </a>
                         </div>
                         <!-- Azure Docs Card -->
-                        <div class="card bg-black rounded-lg p-8 hover-scale">
+                        <div class="card bg-black rounded-lg p-8 hover-scale docs-card">
                             <div class="mb-4 flex">
                                 <img src="data/Azure.svg" alt="Azure" class="h-12 object-contain">
                             </div>
                             <h3 class="text-xl font-bold mb-3">Azure Documentation</h3>
                             <p class="text-gray-200 mb-6">Detailed documentation for deploying and configuring our secure VM solutions on Microsoft Azure.</p>
-                            <a href="https://decyphertek.readthedocs.io/en/latest/products/azure/contents/" target="_blank" class="text-blue-600 hover:text-blue-500 font-medium inline-flex items-center">
+                            <a href="https://decyphertek.readthedocs.io/en/latest/products/azure/contents/" target="_blank" class="text-blue-600 font-medium inline-flex items-center">
                                 View Documentation <i class="fas fa-arrow-right ml-2"></i>
                             </a>
                         </div>

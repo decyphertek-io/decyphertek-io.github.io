@@ -139,6 +139,27 @@
     </style>
 </head>
 <body>
+    <!-- Add JSON-LD structured data to connect with ReadTheDocs -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Decyphertek",
+      "url": "https://decyphertek.io/",
+      "logo": "data/decyphertek-logo.png",
+      "description": "Secure open source solutions available on AWS, Azure, and GCP marketplaces. Specializing in secure VM solutions.",
+      "sameAs": [
+        "https://github.com/decyphertek-io",
+        "https://decyphertek.readthedocs.io/"
+      ],
+      "subOrganization": {
+        "@type": "WebSite",
+        "name": "Decyphertek Documentation",
+        "url": "https://decyphertek.readthedocs.io/",
+        "description": "Comprehensive documentation for Decyphertek's secure VM solutions across AWS, GCP, and Azure."
+      }
+    }
+    </script>
     <div id="root">
         <div class="min-h-screen bg-gray-900 text-white">
             <header class="fixed w-full z-50 bg-black">

@@ -1,8 +1,14 @@
 // Mobile menu toggle
 document.addEventListener('DOMContentLoaded', function() {
-    // Mobile menu functionality
+    // Mobile menu functionality - v1.1 (cache buster)
     const menuButton = document.querySelector('.fa-bars')?.parentElement;
     if (menuButton) {
+        // Clear any existing mobile menu
+        const existingMenu = document.querySelector('.mobile-menu');
+        if (existingMenu) {
+            existingMenu.remove();
+        }
+        
         const mobileMenu = document.createElement('div');
         mobileMenu.className = 'mobile-menu fixed top-0 left-0 h-full w-64 bg-gray-800 z-50 transform -translate-x-full transition-transform duration-300 ease-in-out shadow-lg';
         
@@ -58,6 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
         links.forEach(link => {
             const a = document.createElement('a');
             a.href = link.href;
+            a.target = "_blank"; // Open in new tab
             a.className = 'block text-gray-300 hover:text-green-500 font-medium flex items-center';
             
             // Add icon if present

@@ -5,3 +5,4 @@ Allow: /
 Disallow: /.git/
 Disallow: /.github/
 Disallow: /data/
+Disallow: /data/js/

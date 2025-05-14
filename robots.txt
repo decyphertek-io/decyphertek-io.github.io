@@ -1,8 +1,7 @@
 User-agent: *
 Allow: /
-
-# Don't allow crawling of sensitive directories
 Disallow: /.git/
 Disallow: /.github/
 Disallow: /data/
 Disallow: /data/js/
+Disallow: /data/css/

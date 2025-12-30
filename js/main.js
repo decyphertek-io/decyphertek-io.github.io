@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     const img = document.createElement('img');
                     img.src = 'data/Braintrust.svg';
                     img.alt = 'Braintrust';
-                    img.className = 'h-6 w-6 mr-2 filter invert';
+                    img.className = 'h-5 w-5 mr-2 filter invert';
                     a.appendChild(img);
                 } else {
                     const icon = document.createElement('i');

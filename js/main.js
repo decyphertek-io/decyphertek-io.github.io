@@ -58,7 +58,8 @@ document.addEventListener('DOMContentLoaded', function() {
         // Menu links
         const links = [
             { href: 'https://decyphertek.readthedocs.io/en/latest/', text: 'Docs', icon: 'fas fa-book text-blue-400 mr-2' },
-            { href: 'https://github.com/decyphertek-io', text: 'GitHub', icon: 'fab fa-github text-gray-300 mr-2' }
+            { href: 'https://github.com/decyphertek-io', text: 'GitHub', icon: 'fab fa-github text-gray-300 mr-2' },
+            { href: 'https://app.usebraintrust.com/r/decyphertek1/', text: 'Braintrust', icon: 'braintrust-icon' }
         ];
         
         links.forEach(link => {
@@ -69,9 +70,17 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Add icon if present
             if (link.icon) {
-                const icon = document.createElement('i');
-                icon.className = link.icon;
-                a.appendChild(icon);
+                if (link.icon === 'braintrust-icon') {
+                    const img = document.createElement('img');
+                    img.src = 'data/Braintrust.svg';
+                    img.alt = 'Braintrust';
+                    img.className = 'h-6 w-6 mr-1 filter invert';
+                    a.appendChild(img);
+                } else {
+                    const icon = document.createElement('i');
+                    icon.className = link.icon;
+                    a.appendChild(icon);
+                }
             }
             
             const text = document.createTextNode(link.text);

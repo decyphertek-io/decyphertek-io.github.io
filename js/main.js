@@ -82,7 +82,13 @@ document.addEventListener('DOMContentLoaded', function() {
         headerDiv.appendChild(closeBtn);
         
         const nav = document.createElement('nav');
-        nav.className = 'space-y-6';
+        nav.className = 'space-y-4';
+
+        // Products section header
+        const productsHeader = document.createElement('div');
+        productsHeader.className = 'text-xs uppercase tracking-wider text-gray-500 font-bold';
+        productsHeader.textContent = 'Products';
+        nav.appendChild(productsHeader);
         
         // Menu links
         const links = [

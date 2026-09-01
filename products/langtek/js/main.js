@@ -1,5 +1,34 @@
 // Mobile menu toggle
 document.addEventListener('DOMContentLoaded', function() {
+    // Products dropdown - click to open/close (works on touch + desktop)
+    const productsDropdown = document.querySelector('.products-dropdown');
+    const productsButton = productsDropdown ? productsDropdown.querySelector('button') : null;
+    if (productsDropdown && productsButton) {
+        productsButton.setAttribute('aria-expanded', 'false');
+        productsButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            const isOpen = productsDropdown.classList.toggle('open');
+            productsButton.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+
+        // Close the dropdown when clicking anywhere outside it
+        document.addEventListener('click', function(e) {
+            if (!productsDropdown.contains(e.target)) {
+                productsDropdown.classList.remove('open');
+                productsButton.setAttribute('aria-expanded', 'false');
+            }
+        });
+
+        // Close the dropdown after choosing a product
+        productsDropdown.querySelectorAll('.products-dropdown-menu a').forEach(function(link) {
+            link.addEventListener('click', function() {
+                productsDropdown.classList.remove('open');
+                productsButton.setAttribute('aria-expanded', 'false');
+            });
+        });
+    }
+
     // Mobile menu functionality - v1.1 (cache buster)
     const menuButton = document.querySelector('.fa-bars')?.parentElement;
     if (menuButton) {
@@ -57,6 +86,10 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Menu links
         const links = [
+            { href: '/', text: 'Cloud Marketplace', icon: 'fas fa-cloud text-blue-400 mr-2' },
+            { href: '/products/langtek/', text: 'LangTek', icon: 'fas fa-language text-green-500 mr-2' },
+            { href: '/products/cloudtek/', text: 'CloudTek', icon: 'fas fa-server text-orange-500 mr-2' },
+            { href: '/products/stacktek/', text: 'StackTek', icon: 'fas fa-layer-group text-blue-400 mr-2' },
             { href: 'https://decyphertek.readthedocs.io/en/latest/', text: 'Docs', icon: 'fas fa-book text-blue-400 mr-2' },
             { href: 'https://github.com/decyphertek-io', text: 'GitHub', icon: 'fab fa-github text-gray-300 mr-2' }
         ];
@@ -64,7 +97,9 @@ document.addEventListener('DOMContentLoaded', function() {
         links.forEach(link => {
             const a = document.createElement('a');
             a.href = link.href;
-            a.target = "_blank"; // Open in new tab
+            if (link.href.startsWith('http')) {
+                a.target = "_blank"; // Open external links in new tab
+            }
             a.className = 'block text-gray-300 hover:text-green-500 font-medium flex items-center';
             
             // Add icon if present

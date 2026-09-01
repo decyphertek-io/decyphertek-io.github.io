@@ -1,5 +1,34 @@
 // Mobile menu toggle
 document.addEventListener('DOMContentLoaded', function() {
+    // Products dropdown - click to open/close (works on touch + desktop)
+    const productsDropdown = document.querySelector('.products-dropdown');
+    const productsButton = productsDropdown ? productsDropdown.querySelector('button') : null;
+    if (productsDropdown && productsButton) {
+        productsButton.setAttribute('aria-expanded', 'false');
+        productsButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            const isOpen = productsDropdown.classList.toggle('open');
+            productsButton.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+
+        // Close the dropdown when clicking anywhere outside it
+        document.addEventListener('click', function(e) {
+            if (!productsDropdown.contains(e.target)) {
+                productsDropdown.classList.remove('open');
+                productsButton.setAttribute('aria-expanded', 'false');
+            }
+        });
+
+        // Close the dropdown after choosing a product
+        productsDropdown.querySelectorAll('.products-dropdown-menu a').forEach(function(link) {
+            link.addEventListener('click', function() {
+                productsDropdown.classList.remove('open');
+                productsButton.setAttribute('aria-expanded', 'false');
+            });
+        });
+    }
+
     // Mobile menu functionality - v1.1 (cache buster)
     const menuButton = document.querySelector('.fa-bars')?.parentElement;
     if (menuButton) {

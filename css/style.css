@@ -199,7 +199,14 @@ a:focus, button:focus {
     color: #22c55e;
 }
 
+/* Open state (toggled by click in js/main.js) */
+.products-dropdown.open .products-dropdown-menu,
 .products-dropdown:hover .products-dropdown-menu,
 .products-dropdown:focus-within .products-dropdown-menu {
     display: block;
+}
+
+.products-dropdown.open > button,
+.products-dropdown > button:hover {
+    color: #22c55e;
 }

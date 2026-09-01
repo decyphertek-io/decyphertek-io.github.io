@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- Favicon -->
+        <link rel="icon" type="image/png" sizes="32x32" href="data/web-logo.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="data/web-logo.png">
+        <link rel="shortcut icon" href="data/web-logo.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="data/decyphertek-logo.png">
+        <meta name="theme-color" content="#1f2937">
+        
+        <!-- SEO Meta Tags -->
+        <meta name="description" content="LangTek - Language learning app with RSS Reader, word-by-word translation, and TTS features.">
+        <meta name="keywords" content="language learning, RSS reader, translation app, TTS, text-to-speech, language app, offline translation">
+        <meta name="author" content="Decyphertek">
+        
+        <!-- Open Graph / Social Media Meta Tags -->
+        <meta property="og:title" content="LangTek - Language Learning App">
+        <meta property="og:description" content="Language learning app with RSS Reader, word-by-word translation, and TTS features.">
+        <meta property="og:image" content="https://decyphertek.github.io/data/decyphertek-logo.png">
+        <meta property="og:url" content="https://decyphertek.github.io/">
+        <meta property="og:type" content="website">
+        
+        <!-- Twitter Card data -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="LangTek - Language Learning App">
+        <meta name="twitter:description" content="Language learning app with RSS Reader, word-by-word translation, and TTS features.">
+        <meta name="twitter:image" content="https://decyphertek.github.io/data/decyphertek-logo.png">
+        
+        <!-- Security Headers -->
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data:; base-uri 'self'; object-src 'none'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests;">
+        <meta http-equiv="X-Content-Type-Options" content="nosniff">
+        <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload">
+        <meta http-equiv="X-Frame-Options" content="DENY">
+        <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+        <meta name="referrer" content="strict-origin-when-cross-origin">
+        <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=(), payment=(), usb=(), accelerometer=(), gyroscope=()">
+        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+        <title>LangTek</title>
+        <link href="css/fonts.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+        <!-- Using CDN for Tailwind CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+        <!-- Adding Montserrat font -->
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <!-- Font Awesome Icons -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Add JSON-LD structured data to connect with ReadTheDocs -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "LangTek",
+      "url": "https://decyphertek.github.io/",
+      "logo": "data/decyphertek-logo.png",
+      "description": "Language learning app with RSS Reader, word-by-word translation, and TTS features.",
+      "applicationCategory": "EducationalApplication",
+      "operatingSystem": "Android, iOS",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "sameAs": [
+        "https://github.com/decyphertek/langtek-app"
+      ]
+    }
+    </script>
+    <div id="root">
+        <div class="min-h-screen bg-gray-900 text-white">
+            <header class="fixed w-full z-50 bg-black">
+                <div class="container mx-auto px-6 py-3 relative">
+                    <!-- Logo on far left -->
+                    <div class="absolute left-0 top-1/2 transform -translate-y-1/2 flex items-center mt-1 md:mt-0">
+                        <a href="#" class="flex items-center">
+                            <img src="data/web-logo.png" alt="LangTek" class="h-8 md:h-12 mr-2 md:mr-3">
+                            <span class="text-sm md:text-lg font-bold logo">LANGTEK</span>
+                        </a>
+                    </div>
+                    
+                    <!-- Navigation centered -->
+                    <div class="flex justify-center w-full">
+                        <nav class="hidden md:flex space-x-12">
+                            <a href="https://github.com/decyphertek/langtek-app/wiki" target="_blank" class="text-gray-300 hover:text-green-500 font-medium cursor-pointer whitespace-nowrap flex items-center">
+                                <i class="fas fa-book text-blue-400 mr-2"></i>
+                                Wiki
+                            </a>
+                            <a href="https://github.com/decyphertek/langtek-app" target="_blank" class="text-gray-300 hover:text-green-500 font-medium cursor-pointer whitespace-nowrap flex items-center">
+                                <i class="fab fa-github text-gray-300 mr-2"></i>
+                                GitHub
+                            </a>
+                        </nav>
+                    </div>
+                    
+                    <!-- Buttons on far right -->
+                    <div class="absolute right-6 top-1/2 transform -translate-y-1/2 flex items-center space-x-4">
+
+                        <button class="md:hidden cursor-pointer !rounded-button whitespace-nowrap">
+                            <i class="fas fa-bars text-xl"></i>
+                        </button>
+                    </div>
+                </div>
+            </header>
+            <section class="relative flex items-center pt-28 pb-12 md:pt-32 md:pb-16 section">
+                <div class="absolute inset-0 z-0 overflow-hidden background-image" style="background-image: url('data/background.jpg');">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 overlay"></div>
+                </div>
+                <div class="container mx-auto px-6 relative z-10">
+                    <div class="flex flex-col items-center text-center mb-12">
+                        <div class="px-4 md:px-8 py-4 md:py-6">
+                            <h1 class="text-4xl md:text-6xl font-bold mb-2 leading-tight text-white mt-4 md:mt-0">
+                                LangTek
+                            </h1>
+                            <p class="text-xl md:text-2xl text-white mb-8 md:mb-16">
+                                Decoding the Lexicon
+                            </p>
+                            
+                            <div class="flex flex-row gap-4 md:gap-12 justify-center flex-wrap">
+                                <div class="transform transition-transform duration-300 hover:scale-110 block mb-4">
+                                    <div class="w-28 h-28 md:w-64 md:h-64 bg-gray-800 rounded-lg md:rounded-full flex flex-col md:flex-row items-center justify-center p-3 md:p-12">
+                                        <i class="fas fa-rss text-green-500 text-3xl md:text-6xl mb-1 md:mb-0"></i>
+                                        <span class="md:ml-2 text-white text-base md:text-2xl text-center">RSS Reader</span>
+                                    </div>
+                                </div>
+                                <div class="transform transition-transform duration-300 hover:scale-110 block mb-4">
+                                    <div class="w-28 h-28 md:w-64 md:h-64 bg-gray-800 rounded-lg md:rounded-full flex flex-col md:flex-row items-center justify-center p-3 md:p-12">
+                                        <i class="fas fa-language text-blue-500 text-3xl md:text-6xl mb-1 md:mb-0"></i>
+                                        <span class="md:ml-2 text-white text-base md:text-2xl text-center">Translation</span>
+                                    </div>
+                                </div>
+                                <div class="transform transition-transform duration-300 hover:scale-110 block mb-4">
+                                    <div class="w-28 h-28 md:w-64 md:h-64 bg-gray-800 rounded-lg md:rounded-full flex flex-col md:flex-row items-center justify-center p-3 md:p-12">
+                                        <i class="fas fa-volume-up text-purple-500 text-3xl md:text-6xl mb-1 md:mb-0"></i>
+                                        <span class="md:ml-2 text-white text-base md:text-2xl text-center">TTS</span>
+                                    </div>
+                                </div>
+                                <div class="flex justify-center w-full mt-6">
+                                    <a href="https://play.google.com/store/apps/details?id=com.decyphertek.langtek"
+                                       target="_blank"
+                                       rel="noopener noreferrer"
+                                       class="transform transition-transform duration-300 hover:scale-110 flex flex-col items-center">
+                                        <img src="data/google-play.svg" alt="Google Play - Beta Release" class="h-10 md:h-14 mb-2">
+                                        <span class="text-white text-base md:text-xl font-medium text-center">Beta Release</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- App Features Section -->
+            <section class="py-12 bg-gray-section">
+                <div class="container mx-auto px-6">
+                    <div class="text-center mb-8">
+                        <h2 class="text-3xl md:text-4xl font-bold mb-4 text-white">App Features</h2>
+                        <div class="max-w-4xl mx-auto bg-black bg-opacity-70 p-4 md:p-6 rounded-lg shadow-lg border border-opacity-30" style="border-image: linear-gradient(90deg, #22c55e, #3b82f6) 1;">
+                            <p class="text-base md:text-xl text-gray-200 text-justify leading-relaxed">
+                                LangTek is a focused Spanish to English language learning application designed to make language acquisition intuitive and effective. Our app combines an RSS reader with powerful translation tools, allowing you to learn Spanish through real-world content. With features like word-by-word translation, offline database support, and text-to-speech functionality, LangTek helps you decode the Spanish lexicon.
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl md:text-4xl font-bold mb-4">Key Features</h2>
+                        <p class="text-xl text-gray-200 max-w-3xl mx-auto">LangTek combines powerful language learning tools to help you master Spanish through real-world content.</p>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <!-- Language Tools Box -->
+                        <div class="bg-gray-900 p-8 rounded-lg shadow-lg hover-scale">
+                            <div class="flex items-center mb-6">
+                                <div class="w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center mr-4">
+                                    <i class="fas fa-language text-blue-500 text-2xl"></i>
+                                </div>
+                                <h3 class="text-2xl font-bold">Translation Tools</h3>
+                            </div>
+                            <ul class="space-y-3">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                    <span>Word-by-word translation</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                    <span>API contextual translation</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                    <span>Offline database support</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Content Features Box -->
+                        <div class="bg-gray-900 p-8 rounded-lg shadow-lg hover-scale">
+                            <div class="flex items-center mb-6">
+                                <div class="w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center mr-4">
+                                    <i class="fas fa-book-reader text-purple-500 text-2xl"></i>
+                                </div>
+                                <h3 class="text-2xl font-bold">Content Features</h3>
+                            </div>
+                            <ul class="space-y-3">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                    <span>RSS Reader Feeds</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                    <span>Text-to-Speech (TTS)</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                    <span>AI Chat </span>
+                                </li>
+
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                    <span>Grammar Analysis</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- App Documentation Section -->
+            <section id="documentation" class="py-16 bg-gray-section">
+                <div class="container mx-auto px-6">
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl md:text-4xl font-bold mb-4">Documentation</h2>
+                        <p class="text-xl text-gray-200 max-w-3xl mx-auto">Learn how to use LangTek's features and get the most out of your language learning experience.</p>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <!-- RSS Reader Card -->
+                        <div class="card bg-black rounded-lg p-8 hover-scale docs-card">
+                            <div class="mb-4 flex justify-center md:justify-start">
+                                <i class="fas fa-rss text-green-500 text-4xl p-3 bg-gray-800 rounded-lg"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-3">RSS Reader Guide</h3>
+                            <p class="text-gray-200 mb-6">Learn how to add custom feeds, manage your subscriptions, and use the RSS reader for language learning.</p>
+                            <a href="https://github.com/decyphertek/langtek-app/wiki/RSS-Reader" target="_blank" class="text-green-500 font-medium inline-flex items-center">
+                                View Guide <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                        <!-- Translation Card -->
+                        <div class="card bg-black rounded-lg p-8 hover-scale docs-card">
+                            <div class="mb-4 flex justify-center md:justify-start">
+                                <i class="fas fa-language text-blue-500 text-4xl p-3 bg-gray-800 rounded-lg"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-3">Translation Features</h3>
+                            <p class="text-gray-200 mb-6">Detailed guide on using word-by-word translation, offline database, and API contextual translation.</p>
+                            <a href="https://github.com/decyphertek/langtek-app/wiki/Translations" target="_blank" class="text-blue-500 font-medium inline-flex items-center">
+                                View Guide <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                        <!-- TTS Card -->
+                        <div class="card bg-black rounded-lg p-8 hover-scale docs-card">
+                            <div class="mb-4 flex justify-center md:justify-start">
+                                <i class="fas fa-volume-up text-purple-500 text-4xl p-3 bg-gray-800 rounded-lg"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-3">TTS Documentation</h3>
+                            <p class="text-gray-200 mb-6">Learn how to use the Text-to-Speech feature to improve your pronunciation and listening skills.</p>
+                            <a href="https://github.com/decyphertek/langtek-app/wiki/Text-to-Speech" target="_blank" class="text-purple-500 font-medium inline-flex items-center">
+                                View Guide <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <footer class="bg-black border-t border-gray-800 py-0 footer">
+                <div class="container mx-auto px-6">
+                    <div class="flex flex-col md:flex-row items-center justify-center py-2 md:space-x-8 space-y-2 md:space-y-0">
+                        <div class="w-full md:w-auto text-center">
+                            <span class="text-gray-200 text-sm"><i class="fas fa-envelope mr-1"></i> <span class="font-bold">Contact:</span> adminotaur@decyphertek.io</span>
+                        </div>
+                        
+                        <div class="w-full md:w-auto text-center">
+                            <span class="text-gray-200 text-sm"><i class="fas fa-user-secret mr-1"></i> <span class="font-bold">Privacy Notice:</span> We respect your privacy and do not collect or sell your data.</span>
+                        </div>
+                    </div>
+                    
+                    <div class="flex justify-center">
+                        <div class="border-t border-gray-700 mt-1 mb-0 w-auto" style="width: fit-content; min-width: 30%;"></div>
+                    </div>
+                    
+                    <div class="text-center text-gray-200 text-xs py-1">
+                        <p>&copy; 2026 LangTek by Decyphertek. All rights reserved.</p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+        <script src="js/main.js"></script>
+</body>
+</html>

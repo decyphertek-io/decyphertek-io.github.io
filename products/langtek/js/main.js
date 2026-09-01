@@ -57,10 +57,6 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Menu links
         const links = [
-            { href: '/', text: 'Cloud Marketplace', icon: 'fas fa-cloud text-blue-400 mr-2' },
-            { href: '/products/langtek/', text: 'LangTek', icon: 'fas fa-language text-green-500 mr-2' },
-            { href: '/products/cloudtek/', text: 'CloudTek', icon: 'fas fa-server text-orange-500 mr-2' },
-            { href: '/products/stacktek/', text: 'StackTek', icon: 'fas fa-layer-group text-blue-400 mr-2' },
             { href: 'https://decyphertek.readthedocs.io/en/latest/', text: 'Docs', icon: 'fas fa-book text-blue-400 mr-2' },
             { href: 'https://github.com/decyphertek-io', text: 'GitHub', icon: 'fab fa-github text-gray-300 mr-2' }
         ];
@@ -68,9 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
         links.forEach(link => {
             const a = document.createElement('a');
             a.href = link.href;
-            if (link.href.startsWith('http')) {
-                a.target = "_blank"; // Open external links in new tab
-            }
+            a.target = "_blank"; // Open in new tab
             a.className = 'block text-gray-300 hover:text-green-500 font-medium flex items-center';
             
             // Add icon if present

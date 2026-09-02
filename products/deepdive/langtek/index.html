@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Favicon -->
+        <link rel="icon" type="image/png" sizes="32x32" href="/data/web-logo.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/data/web-logo.png">
+        <link rel="shortcut icon" href="/data/web-logo.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/data/decyphertek-logo.png">
+        <meta name="theme-color" content="#1f2937">
+
+        <!-- SEO Meta Tags -->
+        <title>LangTek Deep Dive - Media Immersion Language Learning App</title>
+        <meta name="description" content="Media immersion for English and Spanish: RSS articles, videos, podcasts, EPUB books, conversation AI, and Anki flash cards. No games, no lessons, no tracking.">
+        <meta name="keywords" content="media immersion language learning, learn spanish by reading, learn english by reading, rss reader language learning, podcast language learning, language learning videos, epub language learning, anki flash cards, conversation ai language learning, language app without games">
+        <meta name="author" content="Decyphertek">
+        <link rel="canonical" href="https://decyphertek-io.github.io/products/deepdive/langtek/">
+
+        <!-- Open Graph / Social Media Meta Tags -->
+        <meta property="og:title" content="LangTek Deep Dive - Media Immersion Language Learning App">
+        <meta property="og:description" content="Media immersion for English and Spanish: RSS articles, videos, podcasts, EPUB books, conversation AI, and Anki flash cards. No games, no lessons, no tracking.">
+        <meta property="og:image" content="https://decyphertek-io.github.io/data/decyphertek-logo.png">
+        <meta property="og:url" content="https://decyphertek-io.github.io/products/deepdive/langtek/">
+        <meta property="og:type" content="article">
+
+        <!-- Twitter Card data -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="LangTek Deep Dive - Media Immersion Language Learning App">
+        <meta name="twitter:description" content="Media immersion for English and Spanish: RSS articles, videos, podcasts, EPUB books, conversation AI, and Anki flash cards. No games, no lessons, no tracking.">
+        <meta name="twitter:image" content="https://decyphertek-io.github.io/data/decyphertek-logo.png">
+
+        <!-- Security Headers -->
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data:; base-uri 'self'; object-src 'none'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests;">
+        <meta http-equiv="X-Content-Type-Options" content="nosniff">
+        <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload">
+        <meta http-equiv="X-Frame-Options" content="DENY">
+        <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+        <meta name="referrer" content="strict-origin-when-cross-origin">
+        <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=(), payment=(), usb=(), accelerometer=(), gyroscope=()">
+        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+        <link href="/css/fonts.css" rel="stylesheet">
+        <link href="/css/style.css?v=2026-09-01" rel="stylesheet">
+        <!-- Using CDN for Tailwind CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+        <!-- Adding Montserrat font -->
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <!-- Font Awesome Icons -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Add JSON-LD structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "LangTek",
+      "url": "https://decyphertek-io.github.io/products/deepdive/langtek/",
+      "logo": "https://decyphertek-io.github.io/data/decyphertek-logo.png",
+      "description": "Media immersion language learning app for English and Spanish: RSS articles, videos, podcasts, EPUB books, a Public Domain Library, conversation AI, and Anki flash cards. No games, no lessons, no tracking.",
+      "applicationCategory": "EducationalApplication",
+      "operatingSystem": "Android",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "sameAs": [
+        "https://github.com/decyphertek/langtek-app"
+      ]
+    }
+    </script>
+    <div id="root">
+        <div class="min-h-screen bg-gray-900 text-white">
+            <header class="fixed w-full z-50 bg-black">
+                <div class="container mx-auto px-6 py-3 relative">
+                    <!-- Logo on far left -->
+                    <div class="absolute left-0 top-1/2 transform -translate-y-1/2 flex items-center mt-1 md:mt-0">
+                        <a href="/" class="flex items-center">
+                            <img src="/data/web-logo.png" alt="Decyphertek" class="h-8 md:h-12 mr-2 md:mr-3">
+                            <span class="text-sm md:text-lg font-bold logo">LANGTEK</span>
+                        </a>
+                    </div>
+
+                    <!-- Navigation centered -->
+                    <div class="flex justify-center w-full">
+                        <nav class="hidden md:flex space-x-8">
+                            <div class="products-dropdown relative">
+                                <button class="text-gray-300 hover:text-green-500 font-medium cursor-pointer whitespace-nowrap flex items-center" aria-haspopup="true">
+                                    <i class="fas fa-cubes text-green-500 mr-2"></i>
+                                    Products
+                                    <i class="fas fa-chevron-down text-xs ml-1"></i>
+                                </button>
+                                <div class="products-dropdown-menu absolute hidden">
+                                    <div class="products-dropdown-inner">
+                                        <a href="/" class="flex items-center">
+                                            <i class="fas fa-cloud text-blue-400 mr-2"></i>
+                                            Cloud Marketplace
+                                        </a>
+                                        <a href="/products/langtek/" class="flex items-center">
+                                            <i class="fas fa-language text-green-500 mr-2"></i>
+                                            LangTek
+                                        </a>
+                                        <a href="/products/cloudtek/" class="flex items-center">
+                                            <i class="fas fa-server text-orange-500 mr-2"></i>
+                                            CloudTek
+                                        </a>
+                                        <a href="/products/stacktek/" class="flex items-center">
+                                            <i class="fas fa-layer-group text-blue-400 mr-2"></i>
+                                            StackTek
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="https://decyphertek.readthedocs.io/en/latest/" target="_blank" class="text-gray-300 hover:text-green-500 font-medium cursor-pointer whitespace-nowrap flex items-center">
+                                <i class="fas fa-book text-blue-400 mr-2"></i>
+                                Docs
+                            </a>
+                            <a href="https://github.com/decyphertek-io" target="_blank" class="text-gray-300 hover:text-green-500 font-medium cursor-pointer whitespace-nowrap flex items-center">
+                                <i class="fab fa-github text-gray-300 mr-2"></i>
+                                GitHub
+                            </a>
+                        </nav>
+                    </div>
+
+                    <!-- Buttons on far right -->
+                    <div class="absolute right-6 top-1/2 transform -translate-y-1/2 flex items-center space-x-4">
+                        <button class="md:hidden cursor-pointer !rounded-button whitespace-nowrap">
+                            <i class="fas fa-bars text-xl"></i>
+                        </button>
+                    </div>
+                </div>
+            </header>
+
+            <article class="pt-28 pb-16">
+                <div class="max-w-4xl mx-auto px-6">
+                    <!-- Title -->
+                    <p class="text-green-500 font-medium tracking-widest uppercase text-xs mb-2">Deep Dive</p>
+                    <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">LangTek</h1>
+                    <p class="text-xl md:text-2xl text-gray-200 mb-8">A media immersion app for learning English or Spanish.</p>
+
+                    <p class="text-lg text-gray-200 leading-relaxed mb-6">
+                        You already spend your day immersed in media. You read the news over coffee, watch videos on your lunch break, and put on a podcast while you drive or cook. That is how you stay sharp in your native language. Nobody studies for it. There are no lessons in it. You just keep consuming things you wanted to consume anyway.
+                    </p>
+                    <p class="text-lg text-gray-200 leading-relaxed mb-20">
+                        LangTek points that same habit at a second language. You read, watch, and listen to real English or Spanish content inside the app, and a built-in translator stands by for the moments you get stuck. There are no streaks to keep, no points to earn, and no mini-games. Just the media, a translator, and a set of study tools that respect your time.
+                    </p>
+
+                    <!-- Why immersion -->
+                    <section class="mb-20">
+                        <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">Why immersion beats lessons</h2>
+                        <p class="text-lg text-gray-200 leading-relaxed mb-4">
+                            Think about how you learned the words you use every day. Very few of them came from a textbook. They came from sportscasters, song lyrics, comments sections, and conversations you actually wanted to follow. Vocabulary sticks when it arrives attached to something you cared about, and grammar makes sense once you have seen it used a few hundred times in real sentences.
+                    </p>
+                        <p class="text-lg text-gray-200 leading-relaxed mb-4">
+                            Most language apps work the other way around. They front-load you with drills, lock progress behind a paywall, and train you to memorize isolated words you will forget by Friday. Immersion apps like LangTek take the opposite approach. The content is the course, and the study tools exist to support it, not to replace it.
+                        </p>
+                        <p class="text-lg text-gray-200 leading-relaxed">
+                            That said, immersion alone has a gap: comprehension. When every third word is unknown, people quit. LangTek closes that gap with two kinds of translation, spaced-repetition flash cards, and an AI you can ask questions. You stay in the content, which is where the learning happens.
+                        </p>
+                    </section>
+
+                    <!-- Reading -->
+                    <section class="mb-20">
+                        <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">Reading: RSS articles and news</h2>
+                        <p class="text-lg text-gray-200 leading-relaxed mb-4">
+                            The core of the app is an RSS reader. Bring the feeds you already follow, in the language you are learning, or start with feeds covering news, technology, sports, and finance. Every article you open is real, current content written for native speakers, not simplified textbook Spanish or English.
+                        </p>
+                        <p class="text-lg text-gray-200 leading-relaxed mb-8">
+                            Reading a daily article in Spanish fits into the same gap in your day that scrolling a news feed already occupies. The difference is that this habit compounds. A few articles a week turns into a few hundred by the end of a quarter, and the vocabulary you meet keeps showing up again because real news rhymes: the same politicians, the same teams, the same eight verbs.
+                        </p>
+                        <figure class="text-center">
+                            <img src="/data/langtek/rrs-article.png_1080x1920.png" alt="LangTek article reader showing an RSS news article in Spanish with word-for-word translation" width="360" height="640" loading="lazy" class="h-96 w-auto mx-auto rounded-2xl border border-gray-700 shadow-2xl bg-black">
+                            <figcaption class="text-sm text-gray-400 mt-3">Real articles, with translation built in so unfamiliar words never stop you.</figcaption>
+                        </figure>
+                    </section>
+
+                    <!-- Videos -->
+                    <section class="mb-20">
+                        <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">Videos you actually want to watch</h2>
+                        <p class="text-lg text-gray-200 leading-relaxed mb-4">
+                            LangTek also brings video into the same reader. Watch Spanish or English videos on the topics you already follow, and when a sentence goes by too fast, use the same translation tools you use for articles to pick it apart.
+                        </p>
+                        <p class="text-lg text-gray-200 leading-relaxed mb-8">
+                            Video gives you something text cannot: faces, gestures, and mouth shapes. Hearing a word while you watch someone say it anchors the sound to the meaning in a way that reading alone does not, and for learners whose goal is conversation, that pairing matters more than perfect grammar.
+                        </p>
+                        <figure class="text-center">
+                            <img src="/data/langtek/rss-video.png_1080x1920.png" alt="LangTek video screen showing a language learning video with translation support" width="360" height="640" loading="lazy" class="h-96 w-auto mx-auto rounded-2xl border border-gray-700 shadow-2xl bg-black">
+                            <figcaption class="text-sm text-gray-400 mt-3">Watch what you already watch. It just counts as practice now.</figcaption>
+                        </figure>
+                    </section>
+
+                    <!-- Podcasts -->
+                    <section class="mb-20">
+                        <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">Podcasts for your commute and your ears</h2>
+                        <p class="text-lg text-gray-200 leading-relaxed mb-4">
+                            Podcasts are where the immersion habit gets cheap. You can listen while driving, walking, washing dishes, or pretending to work out. LangTek treats podcast feeds like any other feed, so the shows live next to your articles and videos instead of in a separate app you never open.
+                        </p>
+                        <p class="text-lg text-gray-200 leading-relaxed mb-8">
+                            Listening builds an ear for the actual speed and rhythm of the language, which is usually the last thing to click for learners. Words you can read comfortably can still fly by at native speed, and the only fix for that is listening in volume. Having transcription-style translation help a tap away means a fast segment never becomes a dead end.
+                        </p>
+                        <figure class="text-center">
+                            <img src="/data/langtek/rss-podcast.png_1080x1920.png" alt="LangTek podcast player showing language learning podcasts with transcript support" width="360" height="640" loading="lazy" class="h-96 w-auto mx-auto rounded-2xl border border-gray-700 shadow-2xl bg-black">
+                            <figcaption class="text-sm text-gray-400 mt-3">Podcasts fill the dead time in a day. No extra time required.</figcaption>
+                        </figure>
+                    </section>
+
+                    <!-- EPUB + Library -->
+                    <section class="mb-20">
+                        <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">EPUB books and the Public Domain Library</h2>
+                        <p class="text-lg text-gray-200 leading-relaxed mb-4">
+                            When you are ready for longer reads, LangTek opens EPUB books. Load your own, or browse the built-in Public Domain Library, a collection of classic books in English and Spanish that costs nothing because their copyrights have long since expired. Cervantes, Twain, Verne, and thousands of others.
+                        </p>
+                        <p class="text-lg text-gray-200 leading-relaxed mb-8">
+                            Finishing your first whole novel in a second language is a quiet milestone. The first chapters are slow and the translation tools get heavy use. Somewhere past the halfway mark you notice you have stopped translating every other line, and by the end you are reading in the language instead of decoding it. The library exists so that experience does not require a bookstore budget.
+                        </p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <figure class="text-center">
+                                <img src="/data/langtek/book.png_1080x1920.png" alt="LangTek EPUB reader showing an open book in Spanish" width="360" height="640" loading="lazy" class="h-96 w-auto mx-auto rounded-2xl border border-gray-700 shadow-2xl bg-black">
+                                <figcaption class="text-sm text-gray-400 mt-3">Read full EPUB books with the same translation help.</figcaption>
+                            </figure>
+                            <figure class="text-center">
+                                <img src="/data/langtek/bookstore.png_1080x1920.png" alt="LangTek Public Domain Library with free classic books in English and Spanish" width="360" height="640" loading="lazy" class="h-96 w-auto mx-auto rounded-2xl border border-gray-700 shadow-2xl bg-black">
+                                <figcaption class="text-sm text-gray-400 mt-3">The built-in bookstore, stocked with free public domain classics.</figcaption>
+                            </figure>
+                        </div>
+                    </section>
+
+                    <!-- Translations -->
+                    <section class="mb-20">
+                        <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">Word-for-word and contextual translation</h2>
+                        <p class="text-lg text-gray-200 leading-relaxed mb-4">
+                            LangTek gives you two translations at once, because they teach you different things. The word-for-word translation shows you the literal skeleton of the sentence, which is how you learn structure and decode new words yourself. The contextual translation shows you what the sentence actually means, which is how natives would say it.
+                        </p>
+                        <p class="text-lg text-gray-200 leading-relaxed mb-4">
+                            Over time, comparing the two trains you to stop translating in your head. You start noticing that Spanish puts the verb somewhere unexpected or that an English idiom has a Spanish cousin, and those observations stick better than a grammar table ever did. There is also offline database support, so common translations do not always depend on a network connection.
+                        </p>
+                        <p class="text-lg text-gray-200 leading-relaxed mb-8">
+                            The same two-layer translation follows you across everything in the app: articles, videos, podcasts, and books. Wherever the language gets hard, the tools are the same and a tap away.
+                        </p>
+                        <figure class="text-center">
+                            <img src="/data/langtek/study-screen.png_1080x1920.png" alt="LangTek study screen showing word-for-word and contextual translation of a sentence" width="360" height="640" loading="lazy" class="h-96 w-auto mx-auto rounded-2xl border border-gray-700 shadow-2xl bg-black">
+                            <figcaption class="text-sm text-gray-400 mt-3">Every sentence: the literal reading and the real meaning side by side.</figcaption>
+                        </figure>
+                    </section>
+
+                    <!-- Conversation AI -->
+                    <section class="mb-20">
+                        <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">Conversation AI with translation</h2>
+                        <p class="text-lg text-gray-200 leading-relaxed mb-4">
+                            Speaking is the part most learners postpone, because it needs a partner and a partner needs scheduling. The conversation AI in LangTek is the partner that is always available. Type in English or Spanish, and it replies like a normal chat, with translations alongside so the conversation never breaks down because of one unknown word.
+                        </p>
+                        <p class="text-lg text-gray-200 leading-relaxed mb-4">
+                            It also answers grammar questions on demand. If a verb ending confused you in this morning's article, you can ask about it in plain English and get the word-for-word and contextual breakdown plus grammar notes, without sidetracking your reading session.
+                        </p>
+                        <p class="text-lg text-gray-200 leading-relaxed mb-8">
+                            The AI feature is optional, and it only ever sees what you type into it. It is a tool that lives quietly until you call on it, like the rest of the app.
+                        </p>
+                        <figure class="text-center">
+                            <img src="/data/langtek/ai-conversation.png_1080x1920.png" alt="LangTek conversation AI chat practicing Spanish with translation" width="360" height="640" loading="lazy" class="h-96 w-auto mx-auto rounded-2xl border border-gray-700 shadow-2xl bg-black">
+                            <figcaption class="text-sm text-gray-400 mt-3">Conversation practice with a partner that never gets tired of your questions.</figcaption>
+                        </figure>
+                    </section>
+
+                    <!-- Anki -->
+                    <section class="mb-20">
+                        <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">Anki flash cards: review that actually schedules itself</h2>
+                        <p class="text-lg text-gray-200 leading-relaxed mb-4">
+                            Immersion fills your head with new words, and spaced repetition keeps them there. LangTek builds in Anki flash cards, the gold standard for vocabulary review: every card carries a memory schedule, the ones you know well come back rarely, and the ones that slip away come back right before you would have forgotten them.
+                        </p>
+                        <p class="text-lg text-gray-200 leading-relaxed mb-8">
+                            This closes the loop the app is built on. You meet a word on Tuesday while reading news you actually care about, it becomes a flash card, and LangTek hands it back to you at the moment it needs one more look. You are not memorizing a list someone else wrote. You are reviewing your own reading history, card by card.
+                        </p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <figure class="text-center">
+                                <img src="/data/langtek/anki-flashcards.png_1080x1920.png" alt="LangTek Anki flash cards screen showing spaced repetition review" width="360" height="640" loading="lazy" class="h-96 w-auto mx-auto rounded-2xl border border-gray-700 shadow-2xl bg-black">
+                                <figcaption class="text-sm text-gray-400 mt-3">Spaced repetition review of the words you met in your content.</figcaption>
+                            </figure>
+                            <figure class="text-center">
+                                <img src="/data/langtek/ankiweb-store.png_1080x1920.png" alt="LangTek Anki deck management and AnkiWeb screen" width="360" height="640" loading="lazy" class="h-96 w-auto mx-auto rounded-2xl border border-gray-700 shadow-2xl bg-black">
+                                <figcaption class="text-sm text-gray-400 mt-3">Deck management for your collection as it grows.</figcaption>
+                            </figure>
+                        </div>
+                    </section>
+
+                    <!-- Timer -->
+                    <section class="mb-20">
+                        <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">Reading timer and scheduled notifications</h2>
+                        <p class="text-lg text-gray-200 leading-relaxed mb-4">
+                            Languages are not learned in weekend marathons. They are learned by showing up a bit at a time, for months, until the accent stops sounding like noise. LangTek keeps the habit honest with a reading timer that tracks your sessions and scheduled notifications that put the app in front of you at the times you actually have a spare minute.
+                        </p>
+                        <p class="text-lg text-gray-200 leading-relaxed mb-8">
+                            A timer sounds like a small thing, but it changes your relationship with practice. Fifteen honest minutes with a timer on feels different from a vague intention to read more, and the notifications keep the footprint small: a nudge, not a guilt trip.
+                        </p>
+                        <figure class="text-center">
+                            <img src="/data/langtek/timer.png_1080x1920.png" alt="LangTek reading timer screen tracking a language learning session" width="360" height="640" loading="lazy" class="h-96 w-auto mx-auto rounded-2xl border border-gray-700 shadow-2xl bg-black">
+                            <figcaption class="text-sm text-gray-400 mt-3">Time on task, tracked and scheduled on your terms.</figcaption>
+                        </figure>
+                    </section>
+
+                    <!-- TTS -->
+                    <section class="mb-20">
+                        <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">Text-to-speech</h2>
+                        <p class="text-lg text-gray-200 leading-relaxed">
+                            Text-to-speech reads content aloud so you can hear the words while your eyes follow them. For learners, pairing the sound with the page is one of the cheapest wins there is: pronunciation stops being guesswork, and words you have only ever read acquire a voice. It is also a way to keep consuming when your eyes are busy, since articles can play while you handle the dishes you were pretending not to see.
+                        </p>
+                    </section>
+
+                    <!-- Privacy -->
+                    <section class="mb-20">
+                        <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">No games, no lessons, no tracking</h2>
+                        <p class="text-lg text-gray-200 leading-relaxed mb-4">
+                            LangTek does not track your behavior, sell your data, or wrap your study time in notifications engineered to make you anxious. The translator and the conversation AI see only what you send them, and anything optional stays optional. The interface is deliberately minimal, because every minute you spend navigating an app is a minute you did not spend in the language.
+                        </p>
+                        <p class="text-lg text-gray-200 leading-relaxed mb-8">
+                            The settings that exist are the ones that matter: your feeds, your languages, your review decks, and how the app looks and reads. Nothing is hiding behind a paywall you cannot see coming.
+                        </p>
+                        <figure class="text-center">
+                            <img src="/data/langtek/settings.png_1080x1920.png" alt="LangTek settings screen showing customization options" width="360" height="640" loading="lazy" class="h-96 w-auto mx-auto rounded-2xl border border-gray-700 shadow-2xl bg-black">
+                            <figcaption class="text-sm text-gray-400 mt-3">Your feeds, your languages, your deck, your theme.</figcaption>
+                        </figure>
+                    </section>
+
+                    <!-- Pricing -->
+                    <section class="mb-20">
+                        <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">Pricing: free during beta</h2>
+                        <p class="text-lg text-gray-200 leading-relaxed mb-4">
+                            LangTek is free while it is in beta, and you should judge it on how it works today, not on a promise. Once beta ends, the plan is a single subscription at three dollars a month, which is a fraction of what most language apps charge, and there will be one plan because pricing games are their own kind of lesson nobody needs.
+                        </p>
+                        <p class="text-lg text-gray-200 leading-relaxed">
+                            We would rather earn a small subscription from people who read in the app every week than farm attention from people who forgot to cancel. The app is available now on Google Play, and the full privacy policy lives in the documentation.
+                        </p>
+                    </section>
+
+                    <!-- CTA -->
+                    <section class="text-center border-t border-gray-800 pt-12 mt-8">
+                        <a href="https://play.google.com/store/apps/details?id=com.decyphertek.langtek" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-8 py-4 bg-green-600 hover:bg-green-500 text-white text-lg font-semibold rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105 mb-4">
+                            <i class="fab fa-google-play mr-3"></i> Get LangTek on Google Play
+                        </a>
+                        <p class="text-sm text-gray-400 mb-6">Beta Release. Free during beta testing.</p>
+                        <a href="/products/langtek/" class="text-green-500 font-medium inline-flex items-center">
+                            <i class="fas fa-arrow-left mr-2"></i> Back to the LangTek product page
+                        </a>
+                        <p class="text-sm text-gray-400 mt-6">
+                            <a href="https://decyphertek.readthedocs.io/en/latest/products/langtek/privacy/" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-500">Privacy Policy</a>
+                        </p>
+                    </section>
+                </div>
+            </article>
+
+            <!-- Footer -->
+            <footer class="bg-black border-t border-gray-800 py-0 footer">
+                <div class="container mx-auto px-6">
+                    <div class="flex flex-col md:flex-row items-center justify-center py-2 md:space-x-8 space-y-2 md:space-y-0">
+                        <div class="w-full md:w-auto text-center">
+                            <span class="text-gray-200 text-sm"><i class="fas fa-envelope mr-1"></i> <span class="font-bold">Contact:</span> adminotaur@decyphertek.io</span>
+                        </div>
+
+                        <div class="w-full md:w-auto text-center">
+                            <span class="text-gray-200 text-sm"><i class="fas fa-user-secret mr-1"></i> <span class="font-bold">Privacy Notice:</span> We respect your privacy and do not collect or sell your data.</span>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-center">
+                        <div class="border-t border-gray-700 mt-1 mb-0 w-auto" style="width: fit-content; min-width: 30%;"></div>
+                    </div>
+
+                    <div class="text-center text-gray-200 text-xs py-1">
+                        <p>&copy; 2026 LangTek by Decyphertek. All rights reserved.</p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+        <script src="/js/main.js?v=1.2"></script>
+</body>
+</html>

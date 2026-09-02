@@ -102,14 +102,14 @@
                             <div class="products-dropdown relative">
                                 <button class="text-gray-300 hover:text-green-500 font-medium cursor-pointer whitespace-nowrap flex items-center" aria-haspopup="true">
                                     <i class="fas fa-cubes text-green-500 mr-2"></i>
-                                    Products
+                                    <span data-i18n="nav.products">Products</span>
                                     <i class="fas fa-chevron-down text-xs ml-1"></i>
                                 </button>
                                 <div class="products-dropdown-menu absolute hidden">
                                     <div class="products-dropdown-inner">
                                         <a href="/" class="flex items-center">
                                             <i class="fas fa-cloud text-blue-400 mr-2"></i>
-                                            Cloud Marketplace
+                                            <span data-i18n="nav.cloud">Cloud Marketplace</span>
                                         </a>
                                         <a href="/products/langtek/" class="flex items-center">
                                             <i class="fas fa-language text-green-500 mr-2"></i>
@@ -128,7 +128,7 @@
                             </div>
                             <a href="https://decyphertek.readthedocs.io/en/latest/" target="_blank" class="text-gray-300 hover:text-green-500 font-medium cursor-pointer whitespace-nowrap flex items-center">
                                 <i class="fas fa-book text-blue-400 mr-2"></i>
-                                Docs
+                                <span data-i18n="nav.docs">Docs</span>
                             </a>
                             <a href="https://github.com/decyphertek-io" target="_blank" class="text-gray-300 hover:text-green-500 font-medium cursor-pointer whitespace-nowrap flex items-center">
                                 <i class="fab fa-github text-gray-300 mr-2"></i>
@@ -139,6 +139,13 @@
                     
                     <!-- Buttons on far right -->
                     <div class="absolute right-6 top-1/2 transform -translate-y-1/2 flex items-center space-x-4">
+
+                        <!-- Language toggle EN | ES -->
+                        <div class="flex items-center font-bold select-none" role="group" aria-label="Language / Idioma">
+                            <button type="button" data-lang="en" class="lang-btn cursor-pointer text-sm md:text-base px-1 text-gray-300 hover:text-green-500" aria-label="English">EN</button>
+                            <span class="text-gray-600 text-sm md:text-base">|</span>
+                            <button type="button" data-lang="es" class="lang-btn cursor-pointer text-sm md:text-base px-1 text-gray-300 hover:text-green-500" aria-label="Español">ES</button>
+                        </div>
 
                         <button class="md:hidden cursor-pointer !rounded-button whitespace-nowrap p-2 -mr-2">
                             <i class="fas fa-bars text-2xl"></i>
@@ -156,7 +163,7 @@
                             <h1 class="text-4xl md:text-6xl font-bold mb-2 leading-tight text-white mt-4 md:mt-0">
                                 LangTek
                             </h1>
-                            <p class="text-xl md:text-2xl text-white mb-8 md:mb-16">
+                            <p class="text-xl md:text-2xl text-white mb-8 md:mb-16" data-i18n="ltk.tagline">
                                 Decoding the Lexicon
                             </p>
                             
@@ -164,19 +171,19 @@
                                 <div class="transform transition-transform duration-300 hover:scale-110 block mb-4">
                                     <div class="w-28 h-28 md:w-64 md:h-64 bg-gray-800 rounded-lg md:rounded-full flex flex-col md:flex-row items-center justify-center p-3 md:p-12">
                                         <i class="fas fa-rss text-green-500 text-3xl md:text-6xl mb-1 md:mb-0"></i>
-                                        <span class="md:ml-2 text-white text-base md:text-2xl text-center">RSS Reader</span>
+                                        <span class="md:ml-2 text-white text-base md:text-2xl text-center" data-i18n="ltk.rss">RSS Reader</span>
                                     </div>
                                 </div>
                                 <div class="transform transition-transform duration-300 hover:scale-110 block mb-4">
                                     <div class="w-28 h-28 md:w-64 md:h-64 bg-gray-800 rounded-lg md:rounded-full flex flex-col md:flex-row items-center justify-center p-3 md:p-12">
                                         <i class="fas fa-language text-blue-500 text-3xl md:text-6xl mb-1 md:mb-0"></i>
-                                        <span class="md:ml-2 text-white text-base md:text-2xl text-center">Translation</span>
+                                        <span class="md:ml-2 text-white text-base md:text-2xl text-center" data-i18n="ltk.translation">Translation</span>
                                     </div>
                                 </div>
                                 <div class="transform transition-transform duration-300 hover:scale-110 block mb-4">
                                     <div class="w-28 h-28 md:w-64 md:h-64 bg-gray-800 rounded-lg md:rounded-full flex flex-col md:flex-row items-center justify-center p-3 md:p-12">
                                         <i class="fas fa-circle-play text-purple-500 text-3xl md:text-6xl mb-1 md:mb-0"></i>
-                                        <span class="md:ml-2 text-white text-base md:text-2xl text-center">Videos &amp; Podcasts</span>
+                                        <span class="md:ml-2 text-white text-base md:text-2xl text-center" data-i18n="ltk.media">Videos &amp; Podcasts</span>
                                     </div>
                                 </div>
                                 <div class="flex justify-center w-full mt-6">
@@ -185,13 +192,13 @@
                                        rel="noopener noreferrer"
                                        class="transform transition-transform duration-300 hover:scale-110 flex flex-col items-center">
                                         <img src="data/google-play.svg" alt="Google Play - Beta Release" class="h-10 md:h-14 mb-2">
-                                        <span class="text-white text-base md:text-xl font-medium text-center">Beta Release</span>
+                                        <span class="text-white text-base md:text-xl font-medium text-center" data-i18n="ltk.beta">Beta Release</span>
                                     </a>
                                 </div>
                                 <div class="flex justify-center w-full mt-4">
                                     <a href="/products/deepdive/langtek/" class="inline-flex items-center px-6 py-3 bg-green-600 hover:bg-green-500 text-white font-semibold rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105">
                                         <i class="fas fa-book-open mr-2"></i>
-                                        LangTek Deep Dive
+                                        <span data-i18n="ltk.deepDive">LangTek Deep Dive</span>
                                     </a>
                                 </div>
                             </div>
@@ -204,13 +211,13 @@
             <section class="py-12 bg-gray-section">
                 <div class="container mx-auto px-6">
                     <div class="text-center mb-8">
-                        <h2 class="text-3xl md:text-4xl font-bold mb-4 text-white">App Features</h2>
+                        <h2 class="text-3xl md:text-4xl font-bold mb-4 text-white" data-i18n="docs.appFeatures">App Features</h2>
                         <div class="max-w-4xl mx-auto bg-black bg-opacity-70 p-4 md:p-6 rounded-lg shadow-lg border border-opacity-30" style="border-image: linear-gradient(90deg, #22c55e, #3b82f6) 1;">
-                            <p class="text-base md:text-xl text-gray-200 text-justify leading-relaxed">
+                            <p class="text-base md:text-xl text-gray-200 text-justify leading-relaxed" data-i18n="ltk.featuresText">
                                 LangTek is a media immersion language learning app for English and Spanish. Learn naturally by reading, watching, and listening - real articles, news, and stories from RSS feeds, plus videos, podcasts, EPUB books, and a built-in Public Domain Library. The built-in translator handles word-by-word and contextual translations, so you can focus on absorbing vocabulary and grammar through authentic content you actually want to consume.
                     <div class="text-center mb-12">
-                        <h2 class="text-3xl md:text-4xl font-bold mb-4">Key Features</h2>
-                        <p class="text-xl text-gray-200 max-w-3xl mx-auto">LangTek combines media immersion with powerful language learning tools so you can master English or Spanish through real-world content.</p>
+                        <h2 class="text-3xl md:text-4xl font-bold mb-4" data-i18n="ltk.keyFeatures">Key Features</h2>
+                        <p class="text-xl text-gray-200 max-w-3xl mx-auto" data-i18n="ltk.keyFeaturesText">LangTek combines media immersion with powerful language learning tools so you can master English or Spanish through real-world content.</p>
                     </div>
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -220,28 +227,28 @@
                                 <div class="w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center mr-4">
                                     <i class="fas fa-language text-blue-500 text-2xl"></i>
                                 </div>
-                                <h3 class="text-2xl font-bold">Translation Tools</h3>
+                                <h3 class="text-2xl font-bold" data-i18n="ltk.toolsTitle">Translation Tools</h3>
                             </div>
                             <ul class="space-y-3">
                                 <li class="flex items-start">
                                     <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
-                                    <span>Word-by-word translation</span>
+                                    <span data-i18n="ltk.t1">Word-by-word translation</span>
                                 </li>
                                 <li class="flex items-start">
                                     <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
-                                    <span>API contextual translation</span>
+                                    <span data-i18n="ltk.t2">API contextual translation</span>
                                 </li>
                                 <li class="flex items-start">
                                     <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
-                                    <span>Offline database support</span>
+                                    <span data-i18n="ltk.t3">Offline database support</span>
                                 </li>
                                 <li class="flex items-start">
                                     <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
-                                    <span>Conversation AI with translation</span>
+                                    <span data-i18n="ltk.t4">Conversation AI with translation</span>
                                 </li>
                                 <li class="flex items-start">
                                     <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
-                                    <span>Grammar questions in English or Spanish</span>
+                                    <span data-i18n="ltk.t5">Grammar questions in English or Spanish</span>
                                 </li>
                             </ul>
                         </div>
@@ -252,36 +259,36 @@
                                 <div class="w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center mr-4">
                                     <i class="fas fa-book-reader text-purple-500 text-2xl"></i>
                                 </div>
-                                <h3 class="text-2xl font-bold">Content Features</h3>
+                                <h3 class="text-2xl font-bold" data-i18n="ltk.contentTitle">Content Features</h3>
                             </div>
                             <ul class="space-y-3">
                                 <li class="flex items-start">
                                     <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
-                                    <span>RSS feeds, articles, and news</span>
+                                    <span data-i18n="ltk.c1">RSS feeds, articles, and news</span>
                                 </li>
                                 <li class="flex items-start">
                                     <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
-                                    <span>Videos and podcasts</span>
+                                    <span data-i18n="ltk.c2">Videos and podcasts</span>
                                 </li>
                                 <li class="flex items-start">
                                     <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
-                                    <span>EPUB books and Public Domain Library</span>
+                                    <span data-i18n="ltk.c3">EPUB books and Public Domain Library</span>
                                 </li>
                                 <li class="flex items-start">
                                     <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
-                                    <span>Anki flash cards</span>
+                                    <span data-i18n="ltk.c4">Anki flash cards</span>
                                 </li>
                                 <li class="flex items-start">
                                     <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
-                                    <span>Reading timer</span>
+                                    <span data-i18n="ltk.c5">Reading timer</span>
                                 </li>
                                 <li class="flex items-start">
                                     <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
-                                    <span>Scheduled notifications</span>
+                                    <span data-i18n="ltk.c6">Scheduled notifications</span>
                                 </li>
                                 <li class="flex items-start">
                                     <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
-                                    <span>Text-to-Speech (TTS)</span>
+                                    <span data-i18n="ltk.c7">Text-to-Speech (TTS)</span>
                                 </li>
                             </ul>
                         </div>
@@ -293,8 +300,8 @@
             <section id="documentation" class="py-16 bg-gray-section">
                 <div class="container mx-auto px-6">
                     <div class="text-center mb-12">
-                        <h2 class="text-3xl md:text-4xl font-bold mb-4">Documentation</h2>
-                        <p class="text-xl text-gray-200 max-w-3xl mx-auto">Learn how to use LangTek's features and get the most out of your language learning experience.</p>
+                        <h2 class="text-3xl md:text-4xl font-bold mb-4" data-i18n="docs.docsTitle">Documentation</h2>
+                        <p class="text-xl text-gray-200 max-w-3xl mx-auto" data-i18n="ltk.docsText">Learn how to use LangTek's features and get the most out of your language learning experience.</p>
                     </div>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         <!-- RSS Reader Card -->
@@ -302,10 +309,10 @@
                             <div class="mb-4 flex justify-center md:justify-start">
                                 <i class="fas fa-rss text-green-500 text-4xl p-3 bg-gray-800 rounded-lg"></i>
                             </div>
-                            <h3 class="text-xl font-bold mb-3">RSS Reader Guide</h3>
-                            <p class="text-gray-200 mb-6">Learn how to add custom feeds, manage your subscriptions, and use the RSS reader for language learning.</p>
+                            <h3 class="text-xl font-bold mb-3" data-i18n="ltk.rssGuideTitle">RSS Reader Guide</h3>
+                            <p class="text-gray-200 mb-6" data-i18n="ltk.rssGuideText">Learn how to add custom feeds, manage your subscriptions, and use the RSS reader for language learning.</p>
                             <a href="https://github.com/decyphertek/langtek-app/wiki/RSS-Reader" target="_blank" class="text-green-500 font-medium inline-flex items-center">
-                                View Guide <i class="fas fa-arrow-right ml-2"></i>
+                                <span data-i18n="docs.viewGuide">View Guide</span> <i class="fas fa-arrow-right ml-2"></i>
                             </a>
                         </div>
                         <!-- Translation Card -->
@@ -313,10 +320,10 @@
                             <div class="mb-4 flex justify-center md:justify-start">
                                 <i class="fas fa-language text-blue-500 text-4xl p-3 bg-gray-800 rounded-lg"></i>
                             </div>
-                            <h3 class="text-xl font-bold mb-3">Translation Features</h3>
-                            <p class="text-gray-200 mb-6">Detailed guide on using word-by-word translation, offline database, and API contextual translation.</p>
+                            <h3 class="text-xl font-bold mb-3" data-i18n="ltk.transFeaturesTitle">Translation Features</h3>
+                            <p class="text-gray-200 mb-6" data-i18n="ltk.transFeaturesText">Detailed guide on using word-by-word translation, offline database, and API contextual translation.</p>
                             <a href="https://github.com/decyphertek/langtek-app/wiki/Translations" target="_blank" class="text-blue-500 font-medium inline-flex items-center">
-                                View Guide <i class="fas fa-arrow-right ml-2"></i>
+                                <span data-i18n="docs.viewGuide">View Guide</span> <i class="fas fa-arrow-right ml-2"></i>
                             </a>
                         </div>
                         <!-- TTS Card -->
@@ -324,10 +331,10 @@
                             <div class="mb-4 flex justify-center md:justify-start">
                                 <i class="fas fa-volume-up text-purple-500 text-4xl p-3 bg-gray-800 rounded-lg"></i>
                             </div>
-                            <h3 class="text-xl font-bold mb-3">TTS Documentation</h3>
-                            <p class="text-gray-200 mb-6">Learn how to use the Text-to-Speech feature to improve your pronunciation and listening skills.</p>
+                            <h3 class="text-xl font-bold mb-3" data-i18n="ltk.ttsTitle">TTS Documentation</h3>
+                            <p class="text-gray-200 mb-6" data-i18n="ltk.ttsText">Learn how to use the Text-to-Speech feature to improve your pronunciation and listening skills.</p>
                             <a href="https://github.com/decyphertek/langtek-app/wiki/Text-to-Speech" target="_blank" class="text-purple-500 font-medium inline-flex items-center">
-                                View Guide <i class="fas fa-arrow-right ml-2"></i>
+                                <span data-i18n="docs.viewGuide">View Guide</span> <i class="fas fa-arrow-right ml-2"></i>
                             </a>
                         </div>
                     </div>
@@ -339,11 +346,11 @@
                 <div class="container mx-auto px-6">
                     <div class="flex flex-col md:flex-row items-center justify-center py-2 md:space-x-8 space-y-2 md:space-y-0">
                         <div class="w-full md:w-auto text-center">
-                            <span class="text-gray-200 text-sm"><i class="fas fa-envelope mr-1"></i> <span class="font-bold">Contact:</span> adminotaur@decyphertek.io</span>
+                            <span class="text-gray-200 text-sm"><i class="fas fa-envelope mr-1"></i> <span class="font-bold" data-i18n="footer.contact">Contact:</span> adminotaur@decyphertek.io</span>
                         </div>
                         
                         <div class="w-full md:w-auto text-center">
-                            <span class="text-gray-200 text-sm"><i class="fas fa-user-secret mr-1"></i> <span class="font-bold">Privacy Notice:</span> We respect your privacy and do not collect or sell your data.</span>
+                            <span class="text-gray-200 text-sm"><i class="fas fa-user-secret mr-1"></i> <span class="font-bold" data-i18n="footer.privacy">Privacy Notice:</span> <span data-i18n="footer.privacyText">We respect your privacy and do not collect or sell your data.</span></span>
                         </div>
                     </div>
                     
@@ -352,12 +359,12 @@
                     </div>
                     
                     <div class="text-center text-gray-200 text-xs py-1">
-                        <p>&copy; 2026 LangTek by Decyphertek LLC. All rights reserved.</p>
+                        <p data-i18n="copyright.langtek">&copy; 2026 LangTek by Decyphertek LLC. All rights reserved.</p>
                     </div>
                 </div>
             </footer>
         </div>
     </div>
-        <script src="js/main.js?v=1.2"></script>
+        <script src="js/main.js?v=1.3"></script>
 </body>
 </html>

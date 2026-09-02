@@ -84,14 +84,14 @@
                             <div class="products-dropdown relative">
                                 <button class="text-gray-300 hover:text-green-500 font-medium cursor-pointer whitespace-nowrap flex items-center" aria-haspopup="true">
                                     <i class="fas fa-cubes text-green-500 mr-2"></i>
-                                    Products
+                                    <span data-i18n="nav.products">Products</span>
                                     <i class="fas fa-chevron-down text-xs ml-1"></i>
                                 </button>
                                 <div class="products-dropdown-menu absolute hidden">
                                     <div class="products-dropdown-inner">
                                         <a href="/" class="flex items-center">
                                             <i class="fas fa-cloud text-blue-400 mr-2"></i>
-                                            Cloud Marketplace
+                                            <span data-i18n="nav.cloud">Cloud Marketplace</span>
                                         </a>
                                         <a href="/products/langtek/" class="flex items-center">
                                             <i class="fas fa-language text-green-500 mr-2"></i>
@@ -110,7 +110,7 @@
                             </div>
                             <a href="https://decyphertek.readthedocs.io/en/latest/" target="_blank" class="text-gray-300 hover:text-green-500 font-medium cursor-pointer whitespace-nowrap flex items-center">
                                 <i class="fas fa-book text-blue-400 mr-2"></i>
-                                Docs
+                                <span data-i18n="nav.docs">Docs</span>
                             </a>
                             <a href="https://github.com/decyphertek-io" target="_blank" class="text-gray-300 hover:text-green-500 font-medium cursor-pointer whitespace-nowrap flex items-center">
                                 <i class="fab fa-github text-gray-300 mr-2"></i>
@@ -121,6 +121,13 @@
                     
                     <!-- Buttons on far right -->
                     <div class="absolute right-6 top-1/2 transform -translate-y-1/2 flex items-center space-x-4">
+
+                        <!-- Language toggle EN | ES -->
+                        <div class="flex items-center font-bold select-none" role="group" aria-label="Language / Idioma">
+                            <button type="button" data-lang="en" class="lang-btn cursor-pointer text-sm md:text-base px-1 text-gray-300 hover:text-green-500" aria-label="English">EN</button>
+                            <span class="text-gray-600 text-sm md:text-base">|</span>
+                            <button type="button" data-lang="es" class="lang-btn cursor-pointer text-sm md:text-base px-1 text-gray-300 hover:text-green-500" aria-label="Español">ES</button>
+                        </div>
 
                         <button class="md:hidden cursor-pointer !rounded-button whitespace-nowrap p-2 -mr-2">
                             <i class="fas fa-bars text-2xl"></i>
@@ -138,7 +145,7 @@
                             <h1 class="text-4xl md:text-6xl font-bold mb-2 leading-tight text-white mt-4 md:mt-0">
                                 StackTek
                             </h1>
-                            <p class="text-xl md:text-2xl text-white mb-8 md:mb-16">
+                            <p class="text-xl md:text-2xl text-white mb-8 md:mb-16" data-i18n="stk.tagline">
                                 Decoding the Stack
                             </p>
                             
@@ -146,25 +153,25 @@
                                 <div class="transform transition-transform duration-300 hover:scale-110 block mb-4">
                                     <div class="w-28 h-28 md:w-64 md:h-64 bg-gray-800 rounded-lg md:rounded-full flex flex-col md:flex-row items-center justify-center p-3 md:p-12">
                                         <i class="fas fa-desktop text-green-500 text-3xl md:text-6xl mb-1 md:mb-0"></i>
-                                        <span class="md:ml-2 text-white text-base md:text-2xl text-center">Web Desktops</span>
+                                        <span class="md:ml-2 text-white text-base md:text-2xl text-center" data-i18n="feat.webDesk">Web Desktops</span>
                                     </div>
                                 </div>
                                 <div class="transform transition-transform duration-300 hover:scale-110 block mb-4">
                                     <div class="w-28 h-28 md:w-64 md:h-64 bg-gray-800 rounded-lg md:rounded-full flex flex-col md:flex-row items-center justify-center p-3 md:p-12">
                                         <i class="fas fa-robot text-blue-500 text-3xl md:text-6xl mb-1 md:mb-0"></i>
-                                        <span class="md:ml-2 text-white text-base md:text-2xl text-center">AI Agents</span>
+                                        <span class="md:ml-2 text-white text-base md:text-2xl text-center" data-i18n="feat.aiAgents">AI Agents</span>
                                     </div>
                                 </div>
                                 <div class="transform transition-transform duration-300 hover:scale-110 block mb-4">
                                     <div class="w-28 h-28 md:w-64 md:h-64 bg-gray-800 rounded-lg md:rounded-full flex flex-col md:flex-row items-center justify-center p-3 md:p-12">
                                         <i class="fas fa-cubes text-purple-500 text-3xl md:text-6xl mb-1 md:mb-0"></i>
-                                        <span class="md:ml-2 text-white text-base md:text-2xl text-center">Containerized Apps</span>
+                                        <span class="md:ml-2 text-white text-base md:text-2xl text-center" data-i18n="feat.contApps">Containerized Apps</span>
                                     </div>
                                 </div>
                                 <div class="flex justify-center w-full mt-6">
                                     <span class="flex items-center text-white text-base md:text-xl font-medium">
                                         <i class="fas fa-flask text-yellow-400 mr-2"></i>
-                                        Self-Hosted — Active Development
+                                        <span data-i18n="stk.status">Self-Hosted — Active Development</span>
                                     </span>
                                 </div>
                             </div>
@@ -177,9 +184,9 @@
             <section class="py-12 bg-gray-section">
                 <div class="container mx-auto px-6">
                     <div class="text-center mb-8">
-                        <h2 class="text-3xl md:text-4xl font-bold mb-4 text-white">Platform Features</h2>
+                        <h2 class="text-3xl md:text-4xl font-bold mb-4 text-white" data-i18n="stk.platformTitle">Platform Features</h2>
                         <div class="max-w-4xl mx-auto bg-black bg-opacity-70 p-4 md:p-6 rounded-lg shadow-lg border border-opacity-30" style="border-image: linear-gradient(90deg, #22c55e, #3b82f6) 1;">
-                            <p class="text-base md:text-xl text-gray-200 text-justify leading-relaxed">
+                            <p class="text-base md:text-xl text-gray-200 text-justify leading-relaxed" data-i18n="stk.featuresText">
                                 StackTek is a secure, browser-native workspace platform you self-host. Launch fully isolated web desktops, AI agents, and containerized Linux applications on demand and access everything directly in your browser over TLS — no VPN, no SSH, and no client software required. Each workspace is a disposable container built fresh on every launch, fronted by a Caddy + Coraza WAF edge, and running on immutable Fedora CoreOS with rootless Podman.
                         </p>
                     </div>
@@ -191,24 +198,24 @@
                                 <div class="w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center mr-4">
                                     <i class="fas fa-desktop text-green-500 text-2xl"></i>
                                 </div>
-                                <h3 class="text-2xl font-bold">Workspaces</h3>
+                                <h3 class="text-2xl font-bold" data-i18n="stk.workspacesTitle">Workspaces</h3>
                             </div>
                             <ul class="space-y-3">
                                 <li class="flex items-start">
                                     <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
-                                    <span>Web desktops — Debian, Kali, Ubuntu, and more</span>
+                                    <span data-i18n="stk.w1">Web desktops — Debian, Kali, Ubuntu, and more</span>
                                 </li>
                                 <li class="flex items-start">
                                     <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
-                                    <span>AI agents — OpenWebUI, LibreChat, Flowise, and more</span>
+                                    <span data-i18n="stk.w2">AI agents — OpenWebUI, LibreChat, Flowise, and more</span>
                                 </li>
                                 <li class="flex items-start">
                                     <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
-                                    <span>Linux apps — Chromium, LibreOffice, VSCodium, and more</span>
+                                    <span data-i18n="stk.w3">Linux apps — Chromium, LibreOffice, VSCodium, and more</span>
                                 </li>
                                 <li class="flex items-start">
                                     <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
-                                    <span>Persistent data that survives restarts</span>
+                                    <span data-i18n="stk.w4">Persistent data that survives restarts</span>
                                 </li>
                             </ul>
                         </div>
@@ -219,24 +226,24 @@
                                 <div class="w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center mr-4">
                                     <i class="fas fa-shield-alt text-blue-500 text-2xl"></i>
                                 </div>
-                                <h3 class="text-2xl font-bold">Security &amp; Isolation</h3>
+                                <h3 class="text-2xl font-bold" data-i18n="stk.securityTitle">Security &amp; Isolation</h3>
                             </div>
                             <ul class="space-y-3">
                                 <li class="flex items-start">
                                     <i class="fas fa-check-circle text-blue-500 mt-1 mr-3"></i>
-                                    <span>Browser access over TLS — no VPN required</span>
+                                    <span data-i18n="stk.s1">Browser access over TLS — no VPN required</span>
                                 </li>
                                 <li class="flex items-start">
                                     <i class="fas fa-check-circle text-blue-500 mt-1 mr-3"></i>
-                                    <span>Caddy + Coraza WAF edge (OWASP Core Rule Set)</span>
+                                    <span data-i18n="stk.s2">Caddy + Coraza WAF edge (OWASP Core Rule Set)</span>
                                 </li>
                                 <li class="flex items-start">
                                     <i class="fas fa-check-circle text-blue-500 mt-1 mr-3"></i>
-                                    <span>Per-user isolation with rootless Podman containers</span>
+                                    <span data-i18n="stk.s3">Per-user isolation with rootless Podman containers</span>
                                 </li>
                                 <li class="flex items-start">
                                     <i class="fas fa-check-circle text-blue-500 mt-1 mr-3"></i>
-                                    <span>Immutable Fedora CoreOS host, fresh build on every launch</span>
+                                    <span data-i18n="stk.s4">Immutable Fedora CoreOS host, fresh build on every launch</span>
                                 </li>
                             </ul>
                         </div>
@@ -248,8 +255,8 @@
             <section id="documentation" class="py-16 bg-gray-section">
                 <div class="container mx-auto px-6">
                     <div class="text-center mb-12">
-                        <h2 class="text-3xl md:text-4xl font-bold mb-4">Documentation</h2>
-                        <p class="text-xl text-gray-200 max-w-3xl mx-auto">Run StackTek on your own server and explore the workspace catalog.</p>
+                        <h2 class="text-3xl md:text-4xl font-bold mb-4" data-i18n="docs.docsTitle">Documentation</h2>
+                        <p class="text-xl text-gray-200 max-w-3xl mx-auto" data-i18n="stk.docsText">Run StackTek on your own server and explore the workspace catalog.</p>
                     </div>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         <!-- GitHub Card -->
@@ -257,10 +264,10 @@
                             <div class="mb-4 flex justify-center md:justify-start">
                                 <i class="fab fa-github text-green-500 text-4xl p-3 bg-gray-800 rounded-lg"></i>
                             </div>
-                            <h3 class="text-xl font-bold mb-3">StackTek on GitHub</h3>
-                            <p class="text-gray-200 mb-6">Browse the repository, follow development, and get the latest StackTek updates.</p>
+                            <h3 class="text-xl font-bold mb-3" data-i18n="stk.githubTitle">StackTek on GitHub</h3>
+                            <p class="text-gray-200 mb-6" data-i18n="stk.githubText">Browse the repository, follow development, and get the latest StackTek updates.</p>
                             <a href="https://github.com/decyphertek-io/stacktek" target="_blank" class="text-green-500 font-medium inline-flex items-center">
-                                View Repository <i class="fas fa-arrow-right ml-2"></i>
+                                <span data-i18n="docs.viewRepo">View Repository</span> <i class="fas fa-arrow-right ml-2"></i>
                             </a>
                         </div>
                         <!-- Quick Start Card -->
@@ -268,10 +275,10 @@
                             <div class="mb-4 flex justify-center md:justify-start">
                                 <i class="fas fa-rocket text-blue-500 text-4xl p-3 bg-gray-800 rounded-lg"></i>
                             </div>
-                            <h3 class="text-xl font-bold mb-3">Quick Start Guide</h3>
-                            <p class="text-gray-200 mb-6">Get StackTek running on your own server in minutes with Podman Compose.</p>
+                            <h3 class="text-xl font-bold mb-3" data-i18n="stk.quickTitle">Quick Start Guide</h3>
+                            <p class="text-gray-200 mb-6" data-i18n="stk.quickText">Get StackTek running on your own server in minutes with Podman Compose.</p>
                             <a href="https://github.com/decyphertek-io/stacktek#quick-start" target="_blank" class="text-blue-500 font-medium inline-flex items-center">
-                                View Guide <i class="fas fa-arrow-right ml-2"></i>
+                                <span data-i18n="docs.viewGuide">View Guide</span> <i class="fas fa-arrow-right ml-2"></i>
                             </a>
                         </div>
                         <!-- Workspaces Card -->
@@ -279,10 +286,10 @@
                             <div class="mb-4 flex justify-center md:justify-start">
                                 <i class="fas fa-layer-group text-purple-500 text-4xl p-3 bg-gray-800 rounded-lg"></i>
                             </div>
-                            <h3 class="text-xl font-bold mb-3">Workspace Catalog</h3>
-                            <p class="text-gray-200 mb-6">Explore the full catalog of web desktops, AI agents, security labs, and Linux apps.</p>
+                            <h3 class="text-xl font-bold mb-3" data-i18n="stk.catalogTitle">Workspace Catalog</h3>
+                            <p class="text-gray-200 mb-6" data-i18n="stk.catalogText">Explore the full catalog of web desktops, AI agents, security labs, and Linux apps.</p>
                             <a href="https://github.com/decyphertek-io/stacktek#workspaces" target="_blank" class="text-purple-500 font-medium inline-flex items-center">
-                                View Catalog <i class="fas fa-arrow-right ml-2"></i>
+                                <span data-i18n="docs.viewCatalog">View Catalog</span> <i class="fas fa-arrow-right ml-2"></i>
                             </a>
                         </div>
                     </div>
@@ -294,11 +301,11 @@
                 <div class="container mx-auto px-6">
                     <div class="flex flex-col md:flex-row items-center justify-center py-2 md:space-x-8 space-y-2 md:space-y-0">
                         <div class="w-full md:w-auto text-center">
-                            <span class="text-gray-200 text-sm"><i class="fas fa-envelope mr-1"></i> <span class="font-bold">Contact:</span> adminotaur@decyphertek.io</span>
+                            <span class="text-gray-200 text-sm"><i class="fas fa-envelope mr-1"></i> <span class="font-bold" data-i18n="footer.contact">Contact:</span> adminotaur@decyphertek.io</span>
                         </div>
                         
                         <div class="w-full md:w-auto text-center">
-                            <span class="text-gray-200 text-sm"><i class="fas fa-user-secret mr-1"></i> <span class="font-bold">Privacy Notice:</span> We respect your privacy and do not collect or sell your data.</span>
+                            <span class="text-gray-200 text-sm"><i class="fas fa-user-secret mr-1"></i> <span class="font-bold" data-i18n="footer.privacy">Privacy Notice:</span> <span data-i18n="footer.privacyText">We respect your privacy and do not collect or sell your data.</span></span>
                         </div>
                     </div>
                     
@@ -307,12 +314,12 @@
                     </div>
                     
                     <div class="text-center text-gray-200 text-xs py-1">
-                        <p>&copy; 2026 StackTek by Decyphertek LLC. All rights reserved.</p>
+                        <p data-i18n="copyright.stacktek">&copy; 2026 StackTek by Decyphertek LLC. All rights reserved.</p>
                     </div>
                 </div>
             </footer>
         </div>
     </div>
-        <script src="/js/main.js?v=1.2"></script>
+        <script src="/js/main.js?v=1.3"></script>
 </body>
 </html>

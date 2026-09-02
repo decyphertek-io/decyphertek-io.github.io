@@ -84,14 +84,14 @@
                             <div class="products-dropdown relative">
                                 <button class="text-gray-300 hover:text-green-500 font-medium cursor-pointer whitespace-nowrap flex items-center" aria-haspopup="true">
                                     <i class="fas fa-cubes text-green-500 mr-2"></i>
-                                    Products
+                                    <span data-i18n="nav.products">Products</span>
                                     <i class="fas fa-chevron-down text-xs ml-1"></i>
                                 </button>
                                 <div class="products-dropdown-menu absolute hidden">
                                     <div class="products-dropdown-inner">
                                         <a href="/" class="flex items-center">
                                             <i class="fas fa-cloud text-blue-400 mr-2"></i>
-                                            Cloud Marketplace
+                                            <span data-i18n="nav.cloud">Cloud Marketplace</span>
                                         </a>
                                         <a href="/products/langtek/" class="flex items-center">
                                             <i class="fas fa-language text-green-500 mr-2"></i>
@@ -110,7 +110,7 @@
                             </div>
                             <a href="https://decyphertek.readthedocs.io/en/latest/" target="_blank" class="text-gray-300 hover:text-green-500 font-medium cursor-pointer whitespace-nowrap flex items-center">
                                 <i class="fas fa-book text-blue-400 mr-2"></i>
-                                Docs
+                                <span data-i18n="nav.docs">Docs</span>
                             </a>
                             <a href="https://github.com/decyphertek-io" target="_blank" class="text-gray-300 hover:text-green-500 font-medium cursor-pointer whitespace-nowrap flex items-center">
                                 <i class="fab fa-github text-gray-300 mr-2"></i>
@@ -121,6 +121,13 @@
                     
                     <!-- Buttons on far right -->
                     <div class="absolute right-6 top-1/2 transform -translate-y-1/2 flex items-center space-x-4">
+
+                        <!-- Language toggle EN | ES -->
+                        <div class="flex items-center font-bold select-none" role="group" aria-label="Language / Idioma">
+                            <button type="button" data-lang="en" class="lang-btn cursor-pointer text-sm md:text-base px-1 text-gray-300 hover:text-green-500" aria-label="English">EN</button>
+                            <span class="text-gray-600 text-sm md:text-base">|</span>
+                            <button type="button" data-lang="es" class="lang-btn cursor-pointer text-sm md:text-base px-1 text-gray-300 hover:text-green-500" aria-label="Español">ES</button>
+                        </div>
 
                         <button class="md:hidden cursor-pointer !rounded-button whitespace-nowrap p-2 -mr-2">
                             <i class="fas fa-bars text-2xl"></i>
@@ -138,7 +145,7 @@
                             <h1 class="text-4xl md:text-6xl font-bold mb-2 leading-tight text-white mt-4 md:mt-0">
                                 CloudTek
                             </h1>
-                            <p class="text-xl md:text-2xl text-white mb-8 md:mb-16">
+                            <p class="text-xl md:text-2xl text-white mb-8 md:mb-16" data-i18n="ctk.tagline">
                                 Decoding the Cloud
                             </p>
                             
@@ -146,25 +153,25 @@
                                 <div class="transform transition-transform duration-300 hover:scale-110 block mb-4">
                                     <div class="w-28 h-28 md:w-64 md:h-64 bg-gray-800 rounded-lg md:rounded-full flex flex-col md:flex-row items-center justify-center p-3 md:p-12">
                                         <i class="fas fa-server text-green-500 text-3xl md:text-6xl mb-1 md:mb-0"></i>
-                                        <span class="md:ml-2 text-white text-base md:text-2xl text-center">VM Management</span>
+                                        <span class="md:ml-2 text-white text-base md:text-2xl text-center" data-i18n="feat.vmMgmt">VM Management</span>
                                     </div>
                                 </div>
                                 <div class="transform transition-transform duration-300 hover:scale-110 block mb-4">
                                     <div class="w-28 h-28 md:w-64 md:h-64 bg-gray-800 rounded-lg md:rounded-full flex flex-col md:flex-row items-center justify-center p-3 md:p-12">
                                         <i class="fas fa-terminal text-blue-500 text-3xl md:text-6xl mb-1 md:mb-0"></i>
-                                        <span class="md:ml-2 text-white text-base md:text-2xl text-center">SSH Terminal</span>
+                                        <span class="md:ml-2 text-white text-base md:text-2xl text-center" data-i18n="feat.ssh">SSH Terminal</span>
                                     </div>
                                 </div>
                                 <div class="transform transition-transform duration-300 hover:scale-110 block mb-4">
                                     <div class="w-28 h-28 md:w-64 md:h-64 bg-gray-800 rounded-lg md:rounded-full flex flex-col md:flex-row items-center justify-center p-3 md:p-12">
                                         <i class="fas fa-shield-alt text-purple-500 text-3xl md:text-6xl mb-1 md:mb-0"></i>
-                                        <span class="md:ml-2 text-white text-base md:text-2xl text-center">Secure Access</span>
+                                        <span class="md:ml-2 text-white text-base md:text-2xl text-center" data-i18n="feat.secure">Secure Access</span>
                                     </div>
                                 </div>
                                 <div class="flex justify-center w-full mt-6">
                                     <span class="flex items-center text-white text-base md:text-xl font-medium">
                                         <i class="fas fa-hourglass-half text-yellow-400 mr-2"></i>
-                                        In Development — Coming Soon
+                                        <span data-i18n="ctk.status">In Development — Coming Soon</span>
                                     </span>
                                 </div>
                             </div>
@@ -177,9 +184,9 @@
             <section class="py-12 bg-gray-section">
                 <div class="container mx-auto px-6">
                     <div class="text-center mb-8">
-                        <h2 class="text-3xl md:text-4xl font-bold mb-4 text-white">App Features</h2>
+                        <h2 class="text-3xl md:text-4xl font-bold mb-4 text-white" data-i18n="docs.appFeatures">App Features</h2>
                         <div class="max-w-4xl mx-auto bg-black bg-opacity-70 p-4 md:p-6 rounded-lg shadow-lg border border-opacity-30" style="border-image: linear-gradient(90deg, #22c55e, #3b82f6) 1;">
-                            <p class="text-base md:text-xl text-gray-200 text-justify leading-relaxed">
+                            <p class="text-base md:text-xl text-gray-200 text-justify leading-relaxed" data-i18n="ctk.featuresText">
                                 CloudTek is a mobile app for managing cloud infrastructure across AWS, Azure, and GCP. Launch, start, stop, reboot, or delete virtual machines, manage firewalls and networking, and SSH into any VM from a built-in terminal — all from your phone. A Rust core talks directly to cloud provider APIs over TLS 1.3 with certificate pinning, and credentials are protected with the Android Keystore.
                         </p>
                     </div>
@@ -191,24 +198,24 @@
                                 <div class="w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center mr-4">
                                     <i class="fas fa-server text-green-500 text-2xl"></i>
                                 </div>
-                                <h3 class="text-2xl font-bold">VM Management</h3>
+                                <h3 class="text-2xl font-bold" data-i18n="feat.vmMgmt">VM Management</h3>
                             </div>
                             <ul class="space-y-3">
                                 <li class="flex items-start">
                                     <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
-                                    <span>Launch, start, stop, reboot, delete VMs</span>
+                                    <span data-i18n="ctk.f1">Launch, start, stop, reboot, delete VMs</span>
                                 </li>
                                 <li class="flex items-start">
                                     <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
-                                    <span>AWS, Azure, and GCP in one app</span>
+                                    <span data-i18n="ctk.f2">AWS, Azure, and GCP in one app</span>
                                 </li>
                                 <li class="flex items-start">
                                     <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
-                                    <span>Marketplace and custom image management</span>
+                                    <span data-i18n="ctk.f3">Marketplace and custom image management</span>
                                 </li>
                                 <li class="flex items-start">
                                     <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
-                                    <span>Activity dashboard with costs</span>
+                                    <span data-i18n="ctk.f4">Activity dashboard with costs</span>
                                 </li>
                             </ul>
                         </div>
@@ -219,24 +226,24 @@
                                 <div class="w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center mr-4">
                                     <i class="fas fa-shield-alt text-blue-500 text-2xl"></i>
                                 </div>
-                                <h3 class="text-2xl font-bold">Security &amp; Access</h3>
+                                <h3 class="text-2xl font-bold" data-i18n="ctk.securityTitle">Security &amp; Access</h3>
                             </div>
                             <ul class="space-y-3">
                                 <li class="flex items-start">
                                     <i class="fas fa-check-circle text-blue-500 mt-1 mr-3"></i>
-                                    <span>Built-in SSH terminal</span>
+                                    <span data-i18n="ctk.f5">Built-in SSH terminal</span>
                                 </li>
                                 <li class="flex items-start">
                                     <i class="fas fa-check-circle text-blue-500 mt-1 mr-3"></i>
-                                    <span>Credential manager (Android Keystore)</span>
+                                    <span data-i18n="ctk.f6">Credential manager (Android Keystore)</span>
                                 </li>
                                 <li class="flex items-start">
                                     <i class="fas fa-check-circle text-blue-500 mt-1 mr-3"></i>
-                                    <span>TLS 1.3 with certificate pinning</span>
+                                    <span data-i18n="ctk.f7">TLS 1.3 with certificate pinning</span>
                                 </li>
                                 <li class="flex items-start">
                                     <i class="fas fa-check-circle text-blue-500 mt-1 mr-3"></i>
-                                    <span>Firewall and security group management</span>
+                                    <span data-i18n="ctk.f8">Firewall and security group management</span>
                                 </li>
                             </ul>
                         </div>
@@ -248,8 +255,8 @@
             <section id="documentation" class="py-16 bg-gray-section">
                 <div class="container mx-auto px-6">
                     <div class="text-center mb-12">
-                        <h2 class="text-3xl md:text-4xl font-bold mb-4">Documentation</h2>
-                        <p class="text-xl text-gray-200 max-w-3xl mx-auto">Follow CloudTek's development and learn how the app manages your cloud resources.</p>
+                        <h2 class="text-3xl md:text-4xl font-bold mb-4" data-i18n="docs.docsTitle">Documentation</h2>
+                        <p class="text-xl text-gray-200 max-w-3xl mx-auto" data-i18n="ctk.docsText">Follow CloudTek's development and learn how the app manages your cloud resources.</p>
                     </div>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         <!-- GitHub Card -->
@@ -257,10 +264,10 @@
                             <div class="mb-4 flex justify-center md:justify-start">
                                 <i class="fab fa-github text-green-500 text-4xl p-3 bg-gray-800 rounded-lg"></i>
                             </div>
-                            <h3 class="text-xl font-bold mb-3">CloudTek on GitHub</h3>
-                            <p class="text-gray-200 mb-6">Browse the source code, track progress, and follow development of the CloudTek mobile app.</p>
+                            <h3 class="text-xl font-bold mb-3" data-i18n="ctk.githubTitle">CloudTek on GitHub</h3>
+                            <p class="text-gray-200 mb-6" data-i18n="ctk.githubText">Browse the source code, track progress, and follow development of the CloudTek mobile app.</p>
                             <a href="https://github.com/decyphertek-io/CloudTek" target="_blank" class="text-green-500 font-medium inline-flex items-center">
-                                View Repository <i class="fas fa-arrow-right ml-2"></i>
+                                <span data-i18n="docs.viewRepo">View Repository</span> <i class="fas fa-arrow-right ml-2"></i>
                             </a>
                         </div>
                         <!-- Architecture Card -->
@@ -268,10 +275,10 @@
                             <div class="mb-4 flex justify-center md:justify-start">
                                 <i class="fas fa-sitemap text-blue-500 text-4xl p-3 bg-gray-800 rounded-lg"></i>
                             </div>
-                            <h3 class="text-xl font-bold mb-3">Mobile Architecture</h3>
-                            <p class="text-gray-200 mb-6">High-level overview of how the Flutter app and Rust core manage VMs directly across AWS, Azure, and GCP.</p>
+                            <h3 class="text-xl font-bold mb-3" data-i18n="ctk.archTitle">Mobile Architecture</h3>
+                            <p class="text-gray-200 mb-6" data-i18n="ctk.archText">High-level overview of how the Flutter app and Rust core manage VMs directly across AWS, Azure, and GCP.</p>
                             <a href="https://github.com/decyphertek-io/CloudTek/blob/main/mobile/mobile.md" target="_blank" class="text-blue-500 font-medium inline-flex items-center">
-                                View Overview <i class="fas fa-arrow-right ml-2"></i>
+                                <span data-i18n="docs.viewOverview">View Overview</span> <i class="fas fa-arrow-right ml-2"></i>
                             </a>
                         </div>
                         <!-- Privacy Card -->
@@ -279,10 +286,10 @@
                             <div class="mb-4 flex justify-center md:justify-start">
                                 <i class="fas fa-lock text-purple-500 text-4xl p-3 bg-gray-800 rounded-lg"></i>
                             </div>
-                            <h3 class="text-xl font-bold mb-3">Privacy by Design</h3>
-                            <p class="text-gray-200 mb-6">CloudTek is built privacy-first — credentials stay on your device, protected by the Android Keystore.</p>
+                            <h3 class="text-xl font-bold mb-3" data-i18n="ctk.privTitle">Privacy by Design</h3>
+                            <p class="text-gray-200 mb-6" data-i18n="ctk.privText">CloudTek is built privacy-first — credentials stay on your device, protected by the Android Keystore.</p>
                             <a href="https://github.com/decyphertek-io/CloudTek/blob/main/mobile/PRIVACY_POLICY.md" target="_blank" class="text-purple-500 font-medium inline-flex items-center">
-                                View Privacy Policy <i class="fas fa-arrow-right ml-2"></i>
+                                <span data-i18n="docs.viewPolicy">View Privacy Policy</span> <i class="fas fa-arrow-right ml-2"></i>
                             </a>
                         </div>
                     </div>
@@ -294,11 +301,11 @@
                 <div class="container mx-auto px-6">
                     <div class="flex flex-col md:flex-row items-center justify-center py-2 md:space-x-8 space-y-2 md:space-y-0">
                         <div class="w-full md:w-auto text-center">
-                            <span class="text-gray-200 text-sm"><i class="fas fa-envelope mr-1"></i> <span class="font-bold">Contact:</span> adminotaur@decyphertek.io</span>
+                            <span class="text-gray-200 text-sm"><i class="fas fa-envelope mr-1"></i> <span class="font-bold" data-i18n="footer.contact">Contact:</span> adminotaur@decyphertek.io</span>
                         </div>
                         
                         <div class="w-full md:w-auto text-center">
-                            <span class="text-gray-200 text-sm"><i class="fas fa-user-secret mr-1"></i> <span class="font-bold">Privacy Notice:</span> We respect your privacy and do not collect or sell your data.</span>
+                            <span class="text-gray-200 text-sm"><i class="fas fa-user-secret mr-1"></i> <span class="font-bold" data-i18n="footer.privacy">Privacy Notice:</span> <span data-i18n="footer.privacyText">We respect your privacy and do not collect or sell your data.</span></span>
                         </div>
                     </div>
                     
@@ -307,12 +314,12 @@
                     </div>
                     
                     <div class="text-center text-gray-200 text-xs py-1">
-                        <p>&copy; 2026 CloudTek by Decyphertek LLC. All rights reserved.</p>
+                        <p data-i18n="copyright.cloudtek">&copy; 2026 CloudTek by Decyphertek LLC. All rights reserved.</p>
                     </div>
                 </div>
             </footer>
         </div>
     </div>
-        <script src="/js/main.js?v=1.2"></script>
+        <script src="/js/main.js?v=1.3"></script>
 </body>
 </html>

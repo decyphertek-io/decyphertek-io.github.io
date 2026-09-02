@@ -89,14 +89,14 @@
                             <div class="products-dropdown relative">
                                 <button class="text-gray-300 hover:text-green-500 font-medium cursor-pointer whitespace-nowrap flex items-center" aria-haspopup="true">
                                     <i class="fas fa-cubes text-green-500 mr-2"></i>
-                                    Products
+                                    <span data-i18n="nav.products">Products</span>
                                     <i class="fas fa-chevron-down text-xs ml-1"></i>
                                 </button>
                                 <div class="products-dropdown-menu absolute hidden">
                                     <div class="products-dropdown-inner">
                                         <a href="/" class="flex items-center">
                                             <i class="fas fa-cloud text-blue-400 mr-2"></i>
-                                            Cloud Marketplace
+                                            <span data-i18n="nav.cloud">Cloud Marketplace</span>
                                         </a>
                                         <a href="/products/langtek/" class="flex items-center">
                                             <i class="fas fa-language text-green-500 mr-2"></i>
@@ -115,7 +115,7 @@
                             </div>
                             <a href="https://decyphertek.readthedocs.io/en/latest/" target="_blank" class="text-gray-300 hover:text-green-500 font-medium cursor-pointer whitespace-nowrap flex items-center">
                                 <i class="fas fa-book text-blue-400 mr-2"></i>
-                                Docs
+                                <span data-i18n="nav.docs">Docs</span>
                             </a>
                             <a href="https://github.com/decyphertek-io" target="_blank" class="text-gray-300 hover:text-green-500 font-medium cursor-pointer whitespace-nowrap flex items-center">
                                 <i class="fab fa-github text-gray-300 mr-2"></i>
@@ -126,6 +126,13 @@
                     
                     <!-- Buttons on far right -->
                     <div class="absolute right-6 top-1/2 transform -translate-y-1/2 flex items-center space-x-4">
+
+                        <!-- Language toggle EN | ES -->
+                        <div class="flex items-center font-bold select-none" role="group" aria-label="Language / Idioma">
+                            <button type="button" data-lang="en" class="lang-btn cursor-pointer text-sm md:text-base px-1 text-gray-300 hover:text-green-500" aria-label="English">EN</button>
+                            <span class="text-gray-600 text-sm md:text-base">|</span>
+                            <button type="button" data-lang="es" class="lang-btn cursor-pointer text-sm md:text-base px-1 text-gray-300 hover:text-green-500" aria-label="Español">ES</button>
+                        </div>
 
                         <button class="md:hidden cursor-pointer !rounded-button whitespace-nowrap p-2 -mr-2">
                             <i class="fas fa-bars text-2xl"></i>
@@ -140,10 +147,10 @@
                 <div class="container mx-auto px-6 relative z-10">
                     <div class="flex flex-col items-center text-center mb-12">
                         <div class="px-4 md:px-8 py-4 md:py-6">
-                            <h1 class="text-4xl md:text-6xl font-bold mb-2 leading-tight text-white mt-4 md:mt-0">
+                            <h1 class="text-4xl md:text-6xl font-bold mb-2 leading-tight text-white mt-4 md:mt-0" data-i18n="root.heroTitle">
                                 Cloud Marketplace
                             </h1>
-                            <p class="text-xl md:text-2xl text-white mb-8 md:mb-16">
+                            <p class="text-xl md:text-2xl text-white mb-8 md:mb-16" data-i18n="root.tagline">
                                 Decoding Technology
                             </p>
                             
@@ -173,9 +180,9 @@
             <section class="py-12 bg-gray-section">
                 <div class="container mx-auto px-6">
                     <div class="text-center mb-8">
-                        <h2 class="text-3xl md:text-4xl font-bold mb-4 text-white">Our Services</h2>
+                        <h2 class="text-3xl md:text-4xl font-bold mb-4 text-white" data-i18n="root.servicesTitle">Our Services</h2>
                         <div class="max-w-4xl mx-auto bg-black bg-opacity-70 p-4 md:p-6 rounded-lg shadow-lg border border-opacity-30" style="border-image: linear-gradient(90deg, #22c55e, #3b82f6) 1;">
-                            <p class="text-base md:text-xl text-gray-200 text-justify leading-relaxed">
+                            <p class="text-base md:text-xl text-gray-200 text-justify leading-relaxed" data-i18n="root.servicesText">
                                 Decyphertek is a trusted partner for Amazon Web Services, Google Cloud Platform, and Microsoft Azure. We specialize in secure open source solutions and ready to deploy virtual machines. Our services prioritize security and ease of use, allowing you to focus on your core business without worrying about the complexities of technology. Decoding technology, so you don't have to.
                             </p>
                         </div>
@@ -187,8 +194,8 @@
             <section id="github" class="py-16 bg-black">
                 <div class="container mx-auto px-6">
                     <div class="text-center mb-12">
-                        <h2 class="text-3xl md:text-4xl font-bold mb-4">Security Features</h2>
-                        <p class="text-xl text-gray-200 max-w-3xl mx-auto">Our virtual machines are built with security in mind, offering a range of features to protect your infrastructure.</p>
+                        <h2 class="text-3xl md:text-4xl font-bold mb-4" data-i18n="root.securityTitle">Security Features</h2>
+                        <p class="text-xl text-gray-200 max-w-3xl mx-auto" data-i18n="root.securityText">Our virtual machines are built with security in mind, offering a range of features to protect your infrastructure.</p>
                     </div>
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -198,32 +205,32 @@
                                 <div class="w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center mr-4">
                                     <img src="data/debian.svg" alt="Debian" class="w-9 h-9 object-contain">
                                 </div>
-                                <h3 class="text-2xl font-bold">Debian Based VMs</h3>
+                                <h3 class="text-2xl font-bold" data-i18n="root.debianTitle">Debian Based VMs</h3>
                             </div>
                             <ul class="space-y-3">
                                 <li class="flex items-start">
                                     <i class="fas fa-shield-alt text-green-500 mt-1 mr-3"></i>
-                                    <span>Nginx Reverse Proxy</span>
+                                    <span data-i18n="feat.nginx">Nginx Reverse Proxy</span>
                                 </li>
                                 <li class="flex items-start">
                                     <i class="fas fa-shield-alt text-green-500 mt-1 mr-3"></i>
-                                    <span>UFW Host Firewall</span>
+                                    <span data-i18n="feat.ufw">UFW Host Firewall</span>
                                 </li>
                                 <li class="flex items-start">
                                     <i class="fas fa-shield-alt text-green-500 mt-1 mr-3"></i>
-                                    <span>OSSEC HIDS</span>
+                                    <span data-i18n="feat.ossec">OSSEC HIDS</span>
                                 </li>
                                 <li class="flex items-start">
                                     <i class="fas fa-shield-alt text-green-500 mt-1 mr-3"></i>
-                                    <span>Rsyslog Collection</span>
+                                    <span data-i18n="feat.rsyslog">Rsyslog Collection</span>
                                 </li>
                                 <li class="flex items-start">
                                     <i class="fas fa-shield-alt text-green-500 mt-1 mr-3"></i>
-                                    <span>Automated Updates</span>
+                                    <span data-i18n="feat.updates">Automated Updates</span>
                                 </li>
                                 <li class="flex items-start">
                                     <i class="fas fa-shield-alt text-green-500 mt-1 mr-3"></i>
-                                    <span>Auditd Monitoring</span>
+                                    <span data-i18n="feat.auditd">Auditd Monitoring</span>
                                 </li>
                             </ul>
                         </div>
@@ -234,37 +241,37 @@
                                 <div class="w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center mr-4">
                                     <img src="data/docker.svg" alt="Docker" class="w-11 h-11 object-contain">
                                 </div>
-                                <h3 class="text-2xl font-bold">CoreOS Based VMs</h3>
+                                <h3 class="text-2xl font-bold" data-i18n="root.coreosTitle">CoreOS Based VMs</h3>
                             </div>
                             <ul class="space-y-3">
                                 <li class="flex items-start">
                                     <i class="fas fa-shield-alt text-blue-500 mt-1 mr-3"></i>
-                                    <span>Immutable OS</span>
+                                    <span data-i18n="feat.immutable">Immutable OS</span>
                                 </li>
                                 <li class="flex items-start">
                                     <i class="fas fa-shield-alt text-blue-500 mt-1 mr-3"></i>
-                                    <span>Auto-updating OS</span>
+                                    <span data-i18n="feat.autoupdate">Auto-updating OS</span>
                                 </li>
                                 <li class="flex items-start">
                                     <i class="fas fa-shield-alt text-blue-500 mt-1 mr-3"></i>
-                                    <span>Containerized Server</span>
+                                    <span data-i18n="feat.container">Containerized Server</span>
                                 </li>
                                 <li class="flex items-start">
                                     <i class="fas fa-shield-alt text-blue-500 mt-1 mr-3"></i>
-                                    <span>Nginx Reverse Proxy</span>
+                                    <span data-i18n="feat.nginx">Nginx Reverse Proxy</span>
                                 </li>
                                 <li class="flex items-start">
                                     <i class="fas fa-shield-alt text-blue-500 mt-1 mr-3"></i>
-                                    <span>SE Linux</span>
+                                    <span data-i18n="feat.selinux">SE Linux</span>
                                 </li>
                                                                 <li class="flex items-start">
                                     <i class="fas fa-shield-alt text-blue-500 mt-1 mr-3"></i>
-                                    <span>Auditd Monitoring</span>
+                                    <span data-i18n="feat.auditd">Auditd Monitoring</span>
                                 </li>
                                                                 </li>
                                                                 <li class="flex items-start">
                                     <i class="fas fa-shield-alt text-blue-500 mt-1 mr-3"></i>
-                                    <span>Firewalld Secured</span>
+                                    <span data-i18n="feat.firewalld">Firewalld Secured</span>
                                 </li>
                             </ul>
                         </div>
@@ -276,8 +283,8 @@
             <section id="services" class="py-16 bg-gray-section">
                 <div class="container mx-auto px-6">
                     <div class="text-center mb-12">
-                        <h2 class="text-3xl md:text-4xl font-bold mb-4">Documentation</h2>
-                        <p class="text-xl text-gray-200 max-w-3xl mx-auto">Explore our comprehensive documentation for deploying and managing secure open source solutions across major cloud platforms.</p>
+                        <h2 class="text-3xl md:text-4xl font-bold mb-4" data-i18n="docs.docsTitle">Documentation</h2>
+                        <p class="text-xl text-gray-200 max-w-3xl mx-auto" data-i18n="root.docsText">Explore our comprehensive documentation for deploying and managing secure open source solutions across major cloud platforms.</p>
                     </div>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         <!-- AWS Docs Card -->
@@ -285,10 +292,10 @@
                             <div class="mb-4 flex">
                                 <img src="data/AWS-lite.svg" alt="AWS" class="h-12 object-contain">
                             </div>
-                            <h3 class="text-xl font-bold mb-3">AWS Documentation</h3>
-                            <p class="text-gray-200 mb-6">Comprehensive guides for deploying and managing our secure VM solutions on Amazon Web Services.</p>
+                            <h3 class="text-xl font-bold mb-3" data-i18n="docs.awsTitle">AWS Documentation</h3>
+                            <p class="text-gray-200 mb-6" data-i18n="root.awsText">Comprehensive guides for deploying and managing our secure VM solutions on Amazon Web Services.</p>
                             <a href="https://decyphertek.readthedocs.io/en/latest/products/aws/contents/" target="_blank" class="text-blue-500 font-medium inline-flex items-center">
-                                View Documentation <i class="fas fa-arrow-right ml-2"></i>
+                                <span data-i18n="docs.viewDocs">View Documentation</span> <i class="fas fa-arrow-right ml-2"></i>
                             </a>
                         </div>
                         <!-- GCP Docs Card -->
@@ -296,10 +303,10 @@
                             <div class="mb-4 flex">
                                 <img src="data/GCP.svg" alt="GCP" class="h-12 object-contain">
                             </div>
-                            <h3 class="text-xl font-bold mb-3">GCP Documentation</h3>
-                            <p class="text-gray-200 mb-6">Practical instructions for deploying and managing our secure VM solutions on Google Cloud Platform.</p>
+                            <h3 class="text-xl font-bold mb-3" data-i18n="docs.gcpTitle">GCP Documentation</h3>
+                            <p class="text-gray-200 mb-6" data-i18n="root.gcpText">Practical instructions for deploying and managing our secure VM solutions on Google Cloud Platform.</p>
                             <a href="https://decyphertek.readthedocs.io/en/latest/products/gcp-contents/" target="_blank" class="text-blue-500 font-medium inline-flex items-center">
-                                View Documentation <i class="fas fa-arrow-right ml-2"></i>
+                                <span data-i18n="docs.viewDocs">View Documentation</span> <i class="fas fa-arrow-right ml-2"></i>
                             </a>
                         </div>
                         <!-- Azure Docs Card -->
@@ -307,10 +314,10 @@
                             <div class="mb-4 flex">
                                 <img src="data/Azure.svg" alt="Azure" class="h-12 object-contain">
                             </div>
-                            <h3 class="text-xl font-bold mb-3">Azure Documentation</h3>
-                            <p class="text-gray-200 mb-6">Detailed documentation for deploying and managing our secure VM solutions on Microsoft Azure.</p>
+                            <h3 class="text-xl font-bold mb-3" data-i18n="docs.azureTitle">Azure Documentation</h3>
+                            <p class="text-gray-200 mb-6" data-i18n="root.azureText">Detailed documentation for deploying and managing our secure VM solutions on Microsoft Azure.</p>
                             <a href="https://decyphertek.readthedocs.io/en/latest/products/azure/contents/" target="_blank" class="text-blue-600 font-medium inline-flex items-center">
-                                View Documentation <i class="fas fa-arrow-right ml-2"></i>
+                                <span data-i18n="docs.viewDocs">View Documentation</span> <i class="fas fa-arrow-right ml-2"></i>
                             </a>
                         </div>
                     </div>
@@ -322,11 +329,11 @@
                 <div class="container mx-auto px-6">
                     <div class="flex flex-col md:flex-row items-center justify-center py-2 md:space-x-8 space-y-2 md:space-y-0">
                         <div class="w-full md:w-auto text-center">
-                            <span class="text-gray-200 text-sm"><i class="fas fa-envelope mr-1"></i> <span class="font-bold">Contact:</span> adminotaur@decyphertek.io</span>
+                            <span class="text-gray-200 text-sm"><i class="fas fa-envelope mr-1"></i> <span class="font-bold" data-i18n="footer.contact">Contact:</span> adminotaur@decyphertek.io</span>
                         </div>
                         
                         <div class="w-full md:w-auto text-center">
-                            <span class="text-gray-200 text-sm"><i class="fas fa-user-secret mr-1"></i> <span class="font-bold">Privacy Notice:</span> We respect your privacy and do not collect or sell your data.</span>
+                            <span class="text-gray-200 text-sm"><i class="fas fa-user-secret mr-1"></i> <span class="font-bold" data-i18n="footer.privacy">Privacy Notice:</span> <span data-i18n="footer.privacyText">We respect your privacy and do not collect or sell your data.</span></span>
                         </div>
                         
                     </div>
@@ -336,12 +343,12 @@
                     </div>
                     
                     <div class="text-center text-gray-200 text-xs py-1">
-                        <p>&copy; 2026 Decyphertek LLC. All rights reserved.</p>
+                        <p data-i18n="copyright.root">&copy; 2026 Decyphertek LLC. All rights reserved.</p>
                     </div>
                 </div>
             </footer>
         </div>
     </div>
-        <script src="js/main.js?v=1.2"></script>
+        <script src="js/main.js?v=1.3"></script>
 </body>
 </html>
